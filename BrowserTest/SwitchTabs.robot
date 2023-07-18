@@ -1,6 +1,8 @@
 *** Settings ***
 Library    Browser
-Library    Dialogs
+#Library    Dialogs
+Test Setup
+Resource
 
 *** Variables ***
 ${browser}          Chromium
