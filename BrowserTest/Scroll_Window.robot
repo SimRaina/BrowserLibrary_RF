@@ -12,6 +12,8 @@ Scroll Test
     Sleep           4
     Scroll To      ${None}         bottom     left      auto
     Sleep           4
+
+ScrollToElement Test
     Scroll To Element   xpath=//div[5]/div/div[1]/div/p
     Sleep          4
 
