@@ -1,6 +1,8 @@
 *** Settings ***
 Library    Browser
 Library    Dialogs
+Test Setup  Open Maximized Browser   ${browser}
+Resource       ../Resource.robot
 
 *** Variables ***
 ${browser}          Chromium
@@ -11,11 +13,10 @@ ${password}         SuperSecretPassword!
 
 *** Test Cases ***
 My First Test
-    New Browser    browser=${browser}    headless=false 
     New Page       ${url}   
     Type Text    id=username      tomsmith
     Type Text   id=password     ${password}
-    Click         css=button >> text=Login   
+    Click       xpath=//*[@id="login"]/button
     #Pause Execution
     ${current url}    Get Url      
     Should Be Equal    ${current url}     ${expected url}  
