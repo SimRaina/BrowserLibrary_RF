@@ -22,6 +22,11 @@ Open Browser to Dashboard Page
     Valid OrangeHRM Login
     Wait Sleep
 
+Open Browser to Demo Page
+    Open Maximized Browser     Chromium
+    Go to Site                 https://demo.nopcommerce.com/
+    Wait Sleep
+
 Wait Sleep
     Sleep           4
 
