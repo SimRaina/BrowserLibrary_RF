@@ -32,5 +32,5 @@ Open Browser to Alert Page
     Go to Site                 https://demoqa.com/alerts
 
 Wait Sleep
-    Sleep           4
+    Sleep           2
 
