@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20230808 19:52:23.773" rpa="false" schemaversion="4">
-<suite id="s1" name="CheckBoxTest" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\CheckBoxTest.robot">
-<test id="s1-t1" name="CheckBoxCheckTest" line="7">
-<kw name="Open Browser to Demo Page" library="Resource" type="SETUP">
+<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20230816 19:06:40.177" rpa="false" schemaversion="4">
+<suite id="s1" name="GetTest" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\GetTest.robot">
+<test id="s1-t1" name="GetTextTest" line="22">
+<kw name="Open Browser to Frame Page" library="Resource" type="SETUP">
 <kw name="Open Maximized Browser" library="Resource">
 <arg>Chromium</arg>
 <kw name="New Browser" library="Browser">
@@ -12,16 +12,16 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230808 19:52:27.109" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\ecf3bb55-4535-4c11-9489-876abc04485c"}</msg>
-<msg timestamp="20230808 19:52:28.638" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\ecf3bb55-4535-4c11-9489-876abc04485c"}</msg>
-<status status="PASS" starttime="20230808 19:52:27.108" endtime="20230808 19:52:28.638"/>
+<msg timestamp="20230816 19:06:43.660" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\9606395a-b06f-4c2a-8b70-41b837c2d244"}</msg>
+<msg timestamp="20230816 19:06:44.819" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\9606395a-b06f-4c2a-8b70-41b837c2d244"}</msg>
+<status status="PASS" starttime="20230816 19:06:43.659" endtime="20230816 19:06:44.821"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>viewport=${None}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230808 19:52:28.642" level="INFO">{
+<msg timestamp="20230816 19:06:44.823" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -32,124 +32,64 @@
   "reducedMotion": "no-preference",
   "viewport": null
 }</msg>
-<msg timestamp="20230808 19:52:28.679" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230808 19:52:28.679" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<status status="PASS" starttime="20230808 19:52:28.639" endtime="20230808 19:52:28.679"/>
+<msg timestamp="20230816 19:06:44.856" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230816 19:06:44.857" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<status status="PASS" starttime="20230816 19:06:44.822" endtime="20230816 19:06:44.858"/>
 </kw>
-<status status="PASS" starttime="20230808 19:52:27.107" endtime="20230808 19:52:28.680"/>
+<status status="PASS" starttime="20230816 19:06:43.658" endtime="20230816 19:06:44.860"/>
 </kw>
 <kw name="Go to Site" library="Resource">
-<arg>https://demo.nopcommerce.com/</arg>
+<arg>https://demoqa.com/frames</arg>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230808 19:52:30.777" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/</msg>
-<status status="PASS" starttime="20230808 19:52:28.681" endtime="20230808 19:52:30.779"/>
+<msg timestamp="20230816 19:06:48.265" level="INFO">Successfully initialized new page object and opened url: https://demoqa.com/frames</msg>
+<status status="PASS" starttime="20230816 19:06:44.861" endtime="20230816 19:06:48.267"/>
 </kw>
-<status status="PASS" starttime="20230808 19:52:28.680" endtime="20230808 19:52:30.780"/>
+<status status="PASS" starttime="20230816 19:06:44.860" endtime="20230816 19:06:48.268"/>
 </kw>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230808 19:52:32.787" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230808 19:52:30.787" endtime="20230808 19:52:32.788"/>
-</kw>
-<status status="PASS" starttime="20230808 19:52:30.782" endtime="20230808 19:52:32.789"/>
-</kw>
-<status status="PASS" starttime="20230808 19:52:27.107" endtime="20230808 19:52:32.789"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>text="Register"</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230808 19:52:32.789" endtime="20230808 19:52:33.802"/>
-</kw>
-<kw name="Scroll To Element" library="Browser">
-<arg>id=Newsletter</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>This method waits for actionability checks, then tries to scroll element into view,
-unless it is completely visible.</doc>
-<status status="PASS" starttime="20230808 19:52:33.802" endtime="20230808 19:52:34.074"/>
+<status status="PASS" starttime="20230816 19:06:43.658" endtime="20230816 19:06:48.269"/>
 </kw>
 <kw name="Wait Sleep" library="Resource">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230808 19:52:36.076" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230808 19:52:34.076" endtime="20230808 19:52:36.077"/>
+<msg timestamp="20230816 19:06:50.271" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230816 19:06:48.271" endtime="20230816 19:06:50.271"/>
 </kw>
-<status status="PASS" starttime="20230808 19:52:34.075" endtime="20230808 19:52:36.077"/>
+<status status="PASS" starttime="20230816 19:06:48.270" endtime="20230816 19:06:50.272"/>
 </kw>
-<kw name="Get Checkbox State" library="Browser">
-<var>${checkboxvalue}</var>
-<arg>id=Newsletter</arg>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>xpath=//div[@class='main-header']</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<doc>Returns the state of the checkbox found by ``selector``.</doc>
-<msg timestamp="20230808 19:52:36.108" level="INFO">Retrieved dom property for element id=Newsletter containing true</msg>
-<msg timestamp="20230808 19:52:36.108" level="INFO">Checkbox is checked</msg>
-<msg timestamp="20230808 19:52:36.109" level="INFO">${checkboxvalue} = True</msg>
-<status status="PASS" starttime="20230808 19:52:36.077" endtime="20230808 19:52:36.109"/>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230816 19:06:50.386" level="INFO">Text: 'Frames'</msg>
+<msg timestamp="20230816 19:06:50.387" level="INFO">${text} = Frames</msg>
+<status status="PASS" starttime="20230816 19:06:50.272" endtime="20230816 19:06:50.388"/>
 </kw>
-<if>
-<branch type="IF" condition="${checkboxvalue}">
-<kw name="Log" library="BuiltIn">
-<arg>"Already Checked"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230808 19:52:36.110" level="INFO">"Already Checked"</msg>
-<status status="PASS" starttime="20230808 19:52:36.110" endtime="20230808 19:52:36.112"/>
-</kw>
-<kw name="Uncheck Checkbox" library="Browser">
-<arg>id=Newsletter</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Unchecks the checkbox found by ``selector``.</doc>
-<status status="PASS" starttime="20230808 19:52:36.113" endtime="20230808 19:52:36.192"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Now Unchecked"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230808 19:52:36.194" level="INFO">"Now Unchecked"</msg>
-<status status="PASS" starttime="20230808 19:52:36.193" endtime="20230808 19:52:36.194"/>
-</kw>
-<status status="PASS" starttime="20230808 19:52:36.109" endtime="20230808 19:52:36.195"/>
-</branch>
-<status status="PASS" starttime="20230808 19:52:36.109" endtime="20230808 19:52:36.195"/>
-</if>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230808 19:52:38.196" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230808 19:52:36.196" endtime="20230808 19:52:38.196"/>
-</kw>
-<status status="PASS" starttime="20230808 19:52:36.195" endtime="20230808 19:52:38.197"/>
-</kw>
-<kw name="Check Checkbox" library="Browser">
-<arg>id=Newsletter</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
-<status status="PASS" starttime="20230808 19:52:38.197" endtime="20230808 19:52:38.242"/>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected text}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230816 19:06:50.388" endtime="20230816 19:06:50.390"/>
 </kw>
 <kw name="Wait Sleep" library="Resource">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230808 19:52:40.244" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230808 19:52:38.244" endtime="20230808 19:52:40.244"/>
+<msg timestamp="20230816 19:06:52.392" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230816 19:06:50.392" endtime="20230816 19:06:52.392"/>
 </kw>
-<status status="PASS" starttime="20230808 19:52:38.243" endtime="20230808 19:52:40.244"/>
+<status status="PASS" starttime="20230816 19:06:50.391" endtime="20230816 19:06:52.393"/>
 </kw>
-<status status="PASS" starttime="20230808 19:52:27.103" endtime="20230808 19:52:40.244"/>
+<status status="PASS" starttime="20230816 19:06:43.652" endtime="20230816 19:06:52.393"/>
 </test>
-<status status="PASS" starttime="20230808 19:52:23.778" endtime="20230808 19:52:40.421"/>
+<status status="PASS" starttime="20230816 19:06:40.182" endtime="20230816 19:06:52.655"/>
 </suite>
 <statistics>
 <total>
@@ -158,7 +98,7 @@ unless it is completely visible.</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="CheckBoxTest">CheckBoxTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="GetTest">GetTest</stat>
 </suite>
 </statistics>
 <errors>

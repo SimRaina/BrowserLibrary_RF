@@ -1,6 +1,7 @@
 *** Settings ***
 Library   Browser
 
+
 *** Keywords ***
 Open Maximized Browser
     [Arguments]    ${browser}
@@ -30,6 +31,10 @@ Open Browser to Demo Page
 Open Browser to Alert Page
     Open Maximized Browser     Chromium
     Go to Site                 https://demoqa.com/alerts
+    
+Open Browser to Frame Page
+     Open Maximized Browser    Chromium
+     Go to Site                https://demoqa.com/frames
 
 Wait Sleep
     Sleep           2
