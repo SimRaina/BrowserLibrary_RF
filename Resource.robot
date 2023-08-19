@@ -36,6 +36,10 @@ Open Browser to Frame Page
      Open Maximized Browser    Chromium
      Go to Site                https://demoqa.com/frames
 
+Open Browser to SelectOptions Page
+     Open Maximized Browser    Chromium
+     Go to Site                https://demo.nopcommerce.com/digital-downloads
+
 Wait Sleep
     Sleep           2
 
