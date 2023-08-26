@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20230819 15:10:08.049" rpa="false" schemaversion="4">
-<suite id="s1" name="SelectOptions" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\SelectOptions.robot">
-<test id="s1-t1" name="SelectOptionsTest" line="7">
-<kw name="Open Browser to SelectOptions Page" library="Resource" type="SETUP">
+<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20230824 14:23:34.248" rpa="false" schemaversion="4">
+<suite id="s1" name="FillText" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\FillText.robot">
+<test id="s1-t1" name="FillTextTest" line="10">
+<kw name="Open Browser to Demo Page" library="Resource" type="SETUP">
 <kw name="Open Maximized Browser" library="Resource">
 <arg>Chromium</arg>
 <kw name="New Browser" library="Browser">
@@ -12,16 +12,16 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230819 15:10:11.769" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\f028b68e-5745-4b86-ad38-618facac421b"}</msg>
-<msg timestamp="20230819 15:10:13.015" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\f028b68e-5745-4b86-ad38-618facac421b"}</msg>
-<status status="PASS" starttime="20230819 15:10:11.768" endtime="20230819 15:10:13.016"/>
+<msg timestamp="20230824 14:23:37.553" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\758e91f0-ecf5-46f2-aa26-059c744ec277"}</msg>
+<msg timestamp="20230824 14:23:38.714" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\758e91f0-ecf5-46f2-aa26-059c744ec277"}</msg>
+<status status="PASS" starttime="20230824 14:23:37.550" endtime="20230824 14:23:38.715"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>viewport=${None}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230819 15:10:13.020" level="INFO">{
+<msg timestamp="20230824 14:23:38.720" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -32,136 +32,63 @@
   "reducedMotion": "no-preference",
   "viewport": null
 }</msg>
-<msg timestamp="20230819 15:10:13.052" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230819 15:10:13.052" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<status status="PASS" starttime="20230819 15:10:13.017" endtime="20230819 15:10:13.052"/>
+<msg timestamp="20230824 14:23:38.739" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230824 14:23:38.739" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<status status="PASS" starttime="20230824 14:23:38.716" endtime="20230824 14:23:38.739"/>
 </kw>
-<status status="PASS" starttime="20230819 15:10:11.767" endtime="20230819 15:10:13.053"/>
+<status status="PASS" starttime="20230824 14:23:37.550" endtime="20230824 14:23:38.739"/>
 </kw>
 <kw name="Go to Site" library="Resource">
-<arg>https://demo.nopcommerce.com/digital-downloads</arg>
+<arg>https://demo.nopcommerce.com/</arg>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230819 15:10:14.875" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/digital-downloads</msg>
-<status status="PASS" starttime="20230819 15:10:13.056" endtime="20230819 15:10:14.876"/>
+<msg timestamp="20230824 14:23:39.984" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/</msg>
+<status status="PASS" starttime="20230824 14:23:38.740" endtime="20230824 14:23:39.984"/>
 </kw>
-<status status="PASS" starttime="20230819 15:10:13.054" endtime="20230819 15:10:14.877"/>
-</kw>
-<status status="PASS" starttime="20230819 15:10:11.767" endtime="20230819 15:10:14.877"/>
+<status status="PASS" starttime="20230824 14:23:38.739" endtime="20230824 14:23:39.985"/>
 </kw>
 <kw name="Wait Sleep" library="Resource">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230819 15:10:16.879" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230819 15:10:14.878" endtime="20230819 15:10:16.879"/>
+<msg timestamp="20230824 14:23:41.986" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230824 14:23:39.986" endtime="20230824 14:23:41.987"/>
 </kw>
-<status status="PASS" starttime="20230819 15:10:14.878" endtime="20230819 15:10:16.880"/>
+<status status="PASS" starttime="20230824 14:23:39.985" endtime="20230824 14:23:41.988"/>
 </kw>
-<kw name="Get Select Options" library="Browser">
-<var>${all_options}</var>
-<arg>id=products-pagesize</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns attributes of options of a ``select`` element as a list of dictionaries.</doc>
-<msg timestamp="20230819 15:10:16.981" level="INFO">entry {
-  value: "3"
-  label: "3"
-}
-entry {
-  value: "6"
-  label: "6"
-  index: 1
-  selected: true
-}
-entry {
-  value: "9"
-  label: "9"
-  index: 2
-}
-</msg>
-<msg timestamp="20230819 15:10:16.982" level="INFO">${all_options} = [{'index': 0, 'value': '3', 'label': '3', 'selected': False}, {'index': 1, 'value': '6', 'label': '6', 'selected': True}, {'index': 2, 'value': '9', 'label': '9', 'selected': False}]</msg>
-<status status="PASS" starttime="20230819 15:10:16.880" endtime="20230819 15:10:16.982"/>
+<status status="PASS" starttime="20230824 14:23:37.549" endtime="20230824 14:23:41.989"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${all_options}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230819 15:10:16.982" level="INFO">[{'index': 0, 'value': '3', 'label': '3', 'selected': False}, {'index': 1, 'value': '6', 'label': '6', 'selected': True}, {'index': 2, 'value': '9', 'label': '9', 'selected': False}]</msg>
-<status status="PASS" starttime="20230819 15:10:16.982" endtime="20230819 15:10:16.982"/>
-</kw>
-<kw name="Get Selected Options" library="Browser">
-<var>${selected_option}</var>
-<arg>id=products-pagesize</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the specified attribute of selected options of the ``select`` element.</doc>
-<msg timestamp="20230819 15:10:17.019" level="INFO">entry {
-  value: "3"
-  label: "3"
-}
-entry {
-  value: "6"
-  label: "6"
-  index: 1
-  selected: true
-}
-entry {
-  value: "9"
-  label: "9"
-  index: 2
-}
-</msg>
-<msg timestamp="20230819 15:10:17.021" level="INFO">${selected_option} = ['6']</msg>
-<status status="PASS" starttime="20230819 15:10:16.982" endtime="20230819 15:10:17.021"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${selected_option}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230819 15:10:17.022" level="INFO">['6']</msg>
-<status status="PASS" starttime="20230819 15:10:17.022" endtime="20230819 15:10:17.022"/>
-</kw>
-<kw name="Select Options By" library="Browser">
-<arg>id=products-pagesize</arg>
-<arg>index</arg>
-<arg>2</arg>
+<kw name="Fill Text" library="Browser">
+<arg>id=${locator}</arg>
+<arg>test</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" starttime="20230819 15:10:17.023" endtime="20230819 15:10:17.092"/>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230824 14:23:41.991" level="INFO">Fills the text 'test' in the given field.</msg>
+<status status="PASS" starttime="20230824 14:23:41.990" endtime="20230824 14:23:42.086"/>
 </kw>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230819 15:10:19.092" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230819 15:10:17.092" endtime="20230819 15:10:19.092"/>
-</kw>
-<status status="PASS" starttime="20230819 15:10:17.092" endtime="20230819 15:10:19.092"/>
-</kw>
-<kw name="Deselect Options" library="Browser">
-<arg>id=products-pagesize</arg>
+<kw name="Clear Text" library="Browser">
+<arg>id=${locator}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
-<doc>Deselects all options from select element found by ``selector``.</doc>
-<status status="PASS" starttime="20230819 15:10:19.092" endtime="20230819 15:10:19.153"/>
+<doc>Clears the text field found by ``selector``.</doc>
+<status status="PASS" starttime="20230824 14:23:42.088" endtime="20230824 14:23:42.140"/>
 </kw>
 <kw name="Wait Sleep" library="Resource">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230819 15:10:21.156" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230819 15:10:19.155" endtime="20230819 15:10:21.157"/>
+<msg timestamp="20230824 14:23:44.145" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230824 14:23:42.143" endtime="20230824 14:23:44.146"/>
 </kw>
-<status status="PASS" starttime="20230819 15:10:19.154" endtime="20230819 15:10:21.158"/>
+<status status="PASS" starttime="20230824 14:23:42.142" endtime="20230824 14:23:44.146"/>
 </kw>
-<status status="PASS" starttime="20230819 15:10:11.758" endtime="20230819 15:10:21.158"/>
+<status status="PASS" starttime="20230824 14:23:37.546" endtime="20230824 14:23:44.147"/>
 </test>
-<status status="PASS" starttime="20230819 15:10:08.056" endtime="20230819 15:10:21.310"/>
+<status status="PASS" starttime="20230824 14:23:34.250" endtime="20230824 14:23:44.417"/>
 </suite>
 <statistics>
 <total>
@@ -170,7 +97,7 @@ entry {
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="SelectOptions">SelectOptions</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="FillText">FillText</stat>
 </suite>
 </statistics>
 <errors>
