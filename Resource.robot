@@ -28,6 +28,11 @@ Open Browser to Demo Page
     Go to Site                 https://demo.nopcommerce.com/
     Wait Sleep
 
+Open Browser to Register Page
+    Open Maximized Browser     Chromium
+    Go to Site                 https://demo.nopcommerce.com/register
+    Wait Sleep
+
 Open Browser to Alert Page
     Open Maximized Browser     Chromium
     Go to Site                 https://demoqa.com/alerts

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20230824 14:23:34.248" rpa="false" schemaversion="4">
-<suite id="s1" name="FillText" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\FillText.robot">
-<test id="s1-t1" name="FillTextTest" line="10">
-<kw name="Open Browser to Demo Page" library="Resource" type="SETUP">
+<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20230828 10:59:29.652" rpa="false" schemaversion="4">
+<suite id="s1" name="MouseClicks" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\MouseClicks.robot">
+<test id="s1-t1" name="MouseClickTest" line="9">
+<kw name="Open Browser to Register Page" library="Resource" type="SETUP">
 <kw name="Open Maximized Browser" library="Resource">
 <arg>Chromium</arg>
 <kw name="New Browser" library="Browser">
@@ -12,16 +12,16 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230824 14:23:37.553" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\758e91f0-ecf5-46f2-aa26-059c744ec277"}</msg>
-<msg timestamp="20230824 14:23:38.714" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\758e91f0-ecf5-46f2-aa26-059c744ec277"}</msg>
-<status status="PASS" starttime="20230824 14:23:37.550" endtime="20230824 14:23:38.715"/>
+<msg timestamp="20230828 10:59:33.029" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\1304ef1d-1104-4392-a932-b6e6cc1ddbc4"}</msg>
+<msg timestamp="20230828 10:59:34.253" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\1304ef1d-1104-4392-a932-b6e6cc1ddbc4"}</msg>
+<status status="PASS" starttime="20230828 10:59:33.027" endtime="20230828 10:59:34.253"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>viewport=${None}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230824 14:23:38.720" level="INFO">{
+<msg timestamp="20230828 10:59:34.255" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -32,63 +32,72 @@
   "reducedMotion": "no-preference",
   "viewport": null
 }</msg>
-<msg timestamp="20230824 14:23:38.739" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230824 14:23:38.739" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<status status="PASS" starttime="20230824 14:23:38.716" endtime="20230824 14:23:38.739"/>
+<msg timestamp="20230828 10:59:34.276" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230828 10:59:34.278" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<status status="PASS" starttime="20230828 10:59:34.254" endtime="20230828 10:59:34.278"/>
 </kw>
-<status status="PASS" starttime="20230824 14:23:37.550" endtime="20230824 14:23:38.739"/>
+<status status="PASS" starttime="20230828 10:59:33.027" endtime="20230828 10:59:34.278"/>
 </kw>
 <kw name="Go to Site" library="Resource">
-<arg>https://demo.nopcommerce.com/</arg>
+<arg>https://demo.nopcommerce.com/register</arg>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230824 14:23:39.984" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/</msg>
-<status status="PASS" starttime="20230824 14:23:38.740" endtime="20230824 14:23:39.984"/>
+<msg timestamp="20230828 10:59:36.041" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/register</msg>
+<status status="PASS" starttime="20230828 10:59:34.280" endtime="20230828 10:59:36.042"/>
 </kw>
-<status status="PASS" starttime="20230824 14:23:38.739" endtime="20230824 14:23:39.985"/>
-</kw>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230824 14:23:41.986" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230824 14:23:39.986" endtime="20230824 14:23:41.987"/>
-</kw>
-<status status="PASS" starttime="20230824 14:23:39.985" endtime="20230824 14:23:41.988"/>
-</kw>
-<status status="PASS" starttime="20230824 14:23:37.549" endtime="20230824 14:23:41.989"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>id=${locator}</arg>
-<arg>test</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230824 14:23:41.991" level="INFO">Fills the text 'test' in the given field.</msg>
-<status status="PASS" starttime="20230824 14:23:41.990" endtime="20230824 14:23:42.086"/>
-</kw>
-<kw name="Clear Text" library="Browser">
-<arg>id=${locator}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears the text field found by ``selector``.</doc>
-<status status="PASS" starttime="20230824 14:23:42.088" endtime="20230824 14:23:42.140"/>
+<status status="PASS" starttime="20230828 10:59:34.279" endtime="20230828 10:59:36.042"/>
 </kw>
 <kw name="Wait Sleep" library="Resource">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230824 14:23:44.145" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230824 14:23:42.143" endtime="20230824 14:23:44.146"/>
+<msg timestamp="20230828 10:59:38.043" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230828 10:59:36.043" endtime="20230828 10:59:38.043"/>
 </kw>
-<status status="PASS" starttime="20230824 14:23:42.142" endtime="20230824 14:23:44.146"/>
+<status status="PASS" starttime="20230828 10:59:36.042" endtime="20230828 10:59:38.043"/>
 </kw>
-<status status="PASS" starttime="20230824 14:23:37.546" endtime="20230824 14:23:44.147"/>
+<status status="PASS" starttime="20230828 10:59:33.026" endtime="20230828 10:59:38.043"/>
+</kw>
+<kw name="Click With Options" library="Browser">
+<arg>//div[6]/div[3]/div/div/div/div[1]/h1</arg>
+<arg>clickCount=2</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230828 10:59:38.043" endtime="20230828 10:59:38.126"/>
+</kw>
+<kw name="Wait Sleep" library="Resource">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230828 10:59:40.128" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230828 10:59:38.127" endtime="20230828 10:59:40.130"/>
+</kw>
+<status status="PASS" starttime="20230828 10:59:38.127" endtime="20230828 10:59:40.130"/>
+</kw>
+<kw name="Click With Options" library="Browser">
+<arg>//div[6]/div[3]/div/div/div/div[1]/h1</arg>
+<arg>button=right</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230828 10:59:40.130" endtime="20230828 10:59:40.226"/>
+</kw>
+<kw name="Wait Sleep" library="Resource">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230828 10:59:42.228" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230828 10:59:40.227" endtime="20230828 10:59:42.229"/>
+</kw>
+<status status="PASS" starttime="20230828 10:59:40.227" endtime="20230828 10:59:42.229"/>
+</kw>
+<status status="PASS" starttime="20230828 10:59:33.024" endtime="20230828 10:59:42.229"/>
 </test>
-<status status="PASS" starttime="20230824 14:23:34.250" endtime="20230824 14:23:44.417"/>
+<status status="PASS" starttime="20230828 10:59:29.661" endtime="20230828 10:59:42.389"/>
 </suite>
 <statistics>
 <total>
@@ -97,7 +106,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="FillText">FillText</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="MouseClicks">MouseClicks</stat>
 </suite>
 </statistics>
 <errors>
