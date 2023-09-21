@@ -1,6 +1,6 @@
 *** Settings ***
 Library   Browser
-
+Library   ExcelLibrary
 
 *** Keywords ***
 Open Maximized Browser
@@ -47,4 +47,12 @@ Open Browser to SelectOptions Page
 
 Wait Sleep
     Sleep           2
+
+Read DropDown Data
+    [Arguments]    ${filepath}       ${sheetname}        ${rownum}     ${colnum}
+    Open Excel Document        ${filepath}        1
+    Get Sheet    ${sheetname}
+    ${data}        Read Excel Cell                          ${rownum}               ${colnum}
+    [Return]    ${data}
+    Close Current Excel Document
 
