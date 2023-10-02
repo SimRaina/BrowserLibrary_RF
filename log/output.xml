@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20230921 10:03:42.457" rpa="false" schemaversion="4">
-<suite id="s1" name="ExcelTestDropDownValues" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\ExcelTestDropDownValues.robot">
-<test id="s1-t1" name="SelectDateFromExcelData" line="9">
-<kw name="Open Browser to Register Page" library="Resource" type="SETUP">
+<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20231002 13:31:40.338" rpa="false" schemaversion="4">
+<suite id="s1" name="TableTest" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\TableTest.robot">
+<test id="s1-t1" name="WebTableTest" line="10">
+<kw name="Open Browser to Table Page" library="Resource" type="SETUP">
 <kw name="Open Maximized Browser" library="Resource">
 <arg>Chromium</arg>
 <kw name="New Browser" library="Browser">
@@ -12,16 +12,16 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230921 10:03:44.887" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\cbc1f2ea-83a5-4a1c-a33a-766cf734185d"}</msg>
-<msg timestamp="20230921 10:03:45.632" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\cbc1f2ea-83a5-4a1c-a33a-766cf734185d"}</msg>
-<status status="PASS" starttime="20230921 10:03:44.887" endtime="20230921 10:03:45.632"/>
+<msg timestamp="20231002 13:31:44.055" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\953eb8df-de7d-4d04-b801-f254e5f56183"}</msg>
+<msg timestamp="20231002 13:31:45.107" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\953eb8df-de7d-4d04-b801-f254e5f56183"}</msg>
+<status status="PASS" starttime="20231002 13:31:44.055" endtime="20231002 13:31:45.107"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>viewport=${None}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230921 10:03:45.632" level="INFO">{
+<msg timestamp="20231002 13:31:45.123" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -32,217 +32,152 @@
   "reducedMotion": "no-preference",
   "viewport": null
 }</msg>
-<msg timestamp="20230921 10:03:45.653" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230921 10:03:45.653" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<status status="PASS" starttime="20230921 10:03:45.632" endtime="20230921 10:03:45.653"/>
+<msg timestamp="20231002 13:31:45.138" level="INFO">Successfully created context. </msg>
+<msg timestamp="20231002 13:31:45.138" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<status status="PASS" starttime="20231002 13:31:45.107" endtime="20231002 13:31:45.138"/>
 </kw>
-<status status="PASS" starttime="20230921 10:03:44.887" endtime="20230921 10:03:45.653"/>
+<status status="PASS" starttime="20231002 13:31:44.055" endtime="20231002 13:31:45.138"/>
 </kw>
 <kw name="Go to Site" library="Resource">
-<arg>https://demo.nopcommerce.com/register</arg>
+<arg>https://tablepress.org/demo/</arg>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230921 10:03:47.217" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/register</msg>
-<status status="PASS" starttime="20230921 10:03:45.653" endtime="20230921 10:03:47.218"/>
+<msg timestamp="20231002 13:31:46.243" level="INFO">Successfully initialized new page object and opened url: https://tablepress.org/demo/</msg>
+<status status="PASS" starttime="20231002 13:31:45.138" endtime="20231002 13:31:46.243"/>
 </kw>
-<status status="PASS" starttime="20230921 10:03:45.653" endtime="20230921 10:03:47.218"/>
-</kw>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230921 10:03:49.219" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230921 10:03:47.219" endtime="20230921 10:03:49.219"/>
-</kw>
-<status status="PASS" starttime="20230921 10:03:47.218" endtime="20230921 10:03:49.219"/>
-</kw>
-<status status="PASS" starttime="20230921 10:03:44.871" endtime="20230921 10:03:49.219"/>
-</kw>
-<kw name="Read DropDown Data" library="Resource">
-<var>${day}</var>
-<arg>C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\BrowserTest${/}\\Data\\Data.xlsx</arg>
-<arg>date</arg>
-<arg>5</arg>
-<arg>1</arg>
-<kw name="Open Excel Document" library="ExcelLibrary">
-<arg>${filepath}</arg>
-<arg>1</arg>
-<doc>Opens xlsx document file.</doc>
-<status status="PASS" starttime="20230921 10:03:49.219" endtime="20230921 10:03:49.229"/>
-</kw>
-<kw name="Get Sheet" library="ExcelLibrary">
-<arg>${sheetname}</arg>
-<doc>Returns a page from the current document.</doc>
-<status status="PASS" starttime="20230921 10:03:49.229" endtime="20230921 10:03:49.229"/>
-</kw>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${data}</var>
-<arg>${rownum}</arg>
-<arg>${colnum}</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20230921 10:03:49.229" level="INFO">${data} = 15</msg>
-<status status="PASS" starttime="20230921 10:03:49.229" endtime="20230921 10:03:49.229"/>
-</kw>
-<kw name="Close Current Excel Document" library="ExcelLibrary">
-<doc>Closes current document.</doc>
-<status status="PASS" starttime="20230921 10:03:49.229" endtime="20230921 10:03:49.229"/>
-</kw>
-<msg timestamp="20230921 10:03:49.229" level="INFO">${day} = 15</msg>
-<status status="PASS" starttime="20230921 10:03:49.219" endtime="20230921 10:03:49.229"/>
-</kw>
-<kw name="Read DropDown Data" library="Resource">
-<var>${month}</var>
-<arg>C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\BrowserTest${/}\\Data\\Data.xlsx</arg>
-<arg>date</arg>
-<arg>5</arg>
-<arg>2</arg>
-<kw name="Open Excel Document" library="ExcelLibrary">
-<arg>${filepath}</arg>
-<arg>1</arg>
-<doc>Opens xlsx document file.</doc>
-<status status="PASS" starttime="20230921 10:03:49.229" endtime="20230921 10:03:49.251"/>
-</kw>
-<kw name="Get Sheet" library="ExcelLibrary">
-<arg>${sheetname}</arg>
-<doc>Returns a page from the current document.</doc>
-<status status="PASS" starttime="20230921 10:03:49.251" endtime="20230921 10:03:49.251"/>
-</kw>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${data}</var>
-<arg>${rownum}</arg>
-<arg>${colnum}</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20230921 10:03:49.251" level="INFO">${data} = April</msg>
-<status status="PASS" starttime="20230921 10:03:49.251" endtime="20230921 10:03:49.251"/>
-</kw>
-<kw name="Close Current Excel Document" library="ExcelLibrary">
-<doc>Closes current document.</doc>
-<status status="PASS" starttime="20230921 10:03:49.251" endtime="20230921 10:03:49.251"/>
-</kw>
-<msg timestamp="20230921 10:03:49.251" level="INFO">${month} = April</msg>
-<status status="PASS" starttime="20230921 10:03:49.229" endtime="20230921 10:03:49.251"/>
-</kw>
-<kw name="Read DropDown Data" library="Resource">
-<var>${year}</var>
-<arg>C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\BrowserTest${/}\\Data\\Data.xlsx</arg>
-<arg>date</arg>
-<arg>5</arg>
-<arg>3</arg>
-<kw name="Open Excel Document" library="ExcelLibrary">
-<arg>${filepath}</arg>
-<arg>1</arg>
-<doc>Opens xlsx document file.</doc>
-<status status="PASS" starttime="20230921 10:03:49.251" endtime="20230921 10:03:49.261"/>
-</kw>
-<kw name="Get Sheet" library="ExcelLibrary">
-<arg>${sheetname}</arg>
-<doc>Returns a page from the current document.</doc>
-<status status="PASS" starttime="20230921 10:03:49.261" endtime="20230921 10:03:49.261"/>
-</kw>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${data}</var>
-<arg>${rownum}</arg>
-<arg>${colnum}</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20230921 10:03:49.261" level="INFO">${data} = 2000</msg>
-<status status="PASS" starttime="20230921 10:03:49.261" endtime="20230921 10:03:49.261"/>
-</kw>
-<kw name="Close Current Excel Document" library="ExcelLibrary">
-<doc>Closes current document.</doc>
-<status status="PASS" starttime="20230921 10:03:49.261" endtime="20230921 10:03:49.261"/>
-</kw>
-<msg timestamp="20230921 10:03:49.261" level="INFO">${year} = 2000</msg>
-<status status="PASS" starttime="20230921 10:03:49.251" endtime="20230921 10:03:49.261"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${StringDay}</var>
-<arg>${day}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230921 10:03:49.261" level="INFO">${StringDay} = 15</msg>
-<status status="PASS" starttime="20230921 10:03:49.261" endtime="20230921 10:03:49.261"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${StringMonth}</var>
-<arg>${month}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230921 10:03:49.261" level="INFO">${StringMonth} = April</msg>
-<status status="PASS" starttime="20230921 10:03:49.261" endtime="20230921 10:03:49.261"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${StringYear}</var>
-<arg>${year}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230921 10:03:49.261" level="INFO">${StringYear} = 2000</msg>
-<status status="PASS" starttime="20230921 10:03:49.261" endtime="20230921 10:03:49.261"/>
-</kw>
-<kw name="Scroll To Element" library="Browser">
-<arg>id=Email</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>This method waits for actionability checks, then tries to scroll element into view,
-unless it is completely visible.</doc>
-<status status="PASS" starttime="20230921 10:03:49.261" endtime="20230921 10:03:49.354"/>
-</kw>
-<kw name="Select Options By" library="Browser">
-<arg>//div[4]/div/select[1]</arg>
-<arg>text</arg>
-<arg>${StringDay}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" starttime="20230921 10:03:49.354" endtime="20230921 10:03:49.394"/>
+<status status="PASS" starttime="20231002 13:31:45.138" endtime="20231002 13:31:46.249"/>
 </kw>
 <kw name="Wait Sleep" library="Resource">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230921 10:03:51.395" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230921 10:03:49.395" endtime="20230921 10:03:51.395"/>
+<msg timestamp="20231002 13:31:48.250" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231002 13:31:46.249" endtime="20231002 13:31:48.250"/>
 </kw>
-<status status="PASS" starttime="20230921 10:03:49.394" endtime="20230921 10:03:51.395"/>
+<status status="PASS" starttime="20231002 13:31:46.249" endtime="20231002 13:31:48.250"/>
 </kw>
-<kw name="Select Options By" library="Browser">
-<arg>//div[4]/div/select[2]</arg>
-<arg>text</arg>
-<arg>${StringMonth}</arg>
+<status status="PASS" starttime="20231002 13:31:44.055" endtime="20231002 13:31:48.250"/>
+</kw>
+<kw name="Get Element Count" library="Browser">
+<var>${number_of_rows}</var>
+<arg>${selector}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
 <tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" starttime="20230921 10:03:51.395" endtime="20230921 10:03:51.439"/>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20231002 13:31:48.285" level="INFO">${number_of_rows} = 1</msg>
+<status status="PASS" starttime="20231002 13:31:48.250" endtime="20231002 13:31:48.285"/>
 </kw>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230921 10:03:53.440" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230921 10:03:51.439" endtime="20230921 10:03:53.440"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${number_of_rows}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231002 13:31:48.285" endtime="20231002 13:31:48.288"/>
 </kw>
-<status status="PASS" starttime="20230921 10:03:51.439" endtime="20230921 10:03:53.440"/>
-</kw>
-<kw name="Select Options By" library="Browser">
-<arg>//div[4]/div/select[3]</arg>
-<arg>text</arg>
-<arg>${StringYear}</arg>
+<for flavor="IN RANGE">
+<var>${INDEX}</var>
+<value>2</value>
+<value>${number_of_rows+2}</value>
+<iter>
+<var name="${INDEX}">2</var>
+<kw name="Get Table Cell Element" library="Browser">
+<var>${CellValue}</var>
+<arg>${selector}</arg>
+<arg>1</arg>
+<arg>${INDEX}</arg>
+<tag>Getter</tag>
 <tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" starttime="20230921 10:03:53.440" endtime="20230921 10:03:53.503"/>
+<doc>Returns the Web Element that has the same column index and same row index as the selected elements.</doc>
+<msg timestamp="20231002 13:31:48.315" level="INFO">JavaScript executed successfully.</msg>
+<msg timestamp="20231002 13:31:48.322" level="INFO">Locator found successfully.</msg>
+<msg timestamp="20231002 13:31:48.322" level="INFO">${CellValue} = xpath=//*[@id="tablepress-demo"] &gt;&gt; tr &gt;&gt; nth=2 &gt;&gt; &gt; * &gt;&gt; nth=1</msg>
+<status status="PASS" starttime="20231002 13:31:48.289" endtime="20231002 13:31:48.322"/>
 </kw>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230921 10:03:55.505" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230921 10:03:53.504" endtime="20230921 10:03:55.505"/>
+<kw name="Get Text" library="Browser">
+<var>${value}</var>
+<arg>${CellValue}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231002 13:31:48.351" level="INFO">Text: 'Reeves'</msg>
+<msg timestamp="20231002 13:31:48.351" level="INFO">${value} = Reeves</msg>
+<status status="PASS" starttime="20231002 13:31:48.322" endtime="20231002 13:31:48.351"/>
 </kw>
-<status status="PASS" starttime="20230921 10:03:53.503" endtime="20230921 10:03:55.505"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231002 13:31:48.351" endtime="20231002 13:31:48.351"/>
 </kw>
-<status status="PASS" starttime="20230921 10:03:44.871" endtime="20230921 10:03:55.505"/>
+<status status="PASS" starttime="20231002 13:31:48.288" endtime="20231002 13:31:48.351"/>
+</iter>
+<status status="PASS" starttime="20231002 13:31:48.288" endtime="20231002 13:31:48.354"/>
+</for>
+<kw name="Get Table Cell Index" library="Browser">
+<var>${colidx}</var>
+<arg>${selector} &gt;&gt; "Barry"</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the index (0 based) of a table cell within its row.</doc>
+<msg timestamp="20231002 13:31:48.355" level="INFO">${colidx} = 1</msg>
+<status status="PASS" starttime="20231002 13:31:48.354" endtime="20231002 13:31:48.355"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${colidx}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231002 13:31:48.355" endtime="20231002 13:31:48.355"/>
+</kw>
+<kw name="Get Table Row Index" library="Browser">
+<var>${rowidx}</var>
+<arg>${selector} &gt;&gt; "Barry"</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the index (0 based) of a table row.</doc>
+<msg timestamp="20231002 13:31:48.379" level="INFO">${rowidx} = 8</msg>
+<status status="PASS" starttime="20231002 13:31:48.355" endtime="20231002 13:31:48.379"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${rowidx}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231002 13:31:48.379" endtime="20231002 13:31:48.379"/>
+</kw>
+<kw name="Get Table Cell Element" library="Browser">
+<var>${newValue}</var>
+<arg>${selector}</arg>
+<arg>${colidx}</arg>
+<arg>${rowidx}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the Web Element that has the same column index and same row index as the selected elements.</doc>
+<msg timestamp="20231002 13:31:48.388" level="INFO">JavaScript executed successfully.</msg>
+<msg timestamp="20231002 13:31:48.398" level="INFO">Locator found successfully.</msg>
+<msg timestamp="20231002 13:31:48.398" level="INFO">${newValue} = xpath=//*[@id="tablepress-demo"] &gt;&gt; tr &gt;&gt; nth=8 &gt;&gt; &gt; * &gt;&gt; nth=1</msg>
+<status status="PASS" starttime="20231002 13:31:48.379" endtime="20231002 13:31:48.398"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${name}</var>
+<arg>${newValue}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231002 13:31:48.407" level="INFO">Text: 'Barry'</msg>
+<msg timestamp="20231002 13:31:48.407" level="INFO">${name} = Barry</msg>
+<status status="PASS" starttime="20231002 13:31:48.398" endtime="20231002 13:31:48.407"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${name}</arg>
+<arg>Barry</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231002 13:31:48.407" endtime="20231002 13:31:48.407"/>
+</kw>
+<status status="PASS" starttime="20231002 13:31:44.055" endtime="20231002 13:31:48.407"/>
 </test>
-<status status="PASS" starttime="20230921 10:03:42.473" endtime="20230921 10:03:55.634"/>
+<status status="PASS" starttime="20231002 13:31:40.338" endtime="20231002 13:31:48.508"/>
 </suite>
 <statistics>
 <total>
@@ -251,7 +186,7 @@ unless it is completely visible.</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="ExcelTestDropDownValues">ExcelTestDropDownValues</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TableTest">TableTest</stat>
 </suite>
 </statistics>
 <errors>

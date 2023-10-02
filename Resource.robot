@@ -19,8 +19,13 @@ Valid OrangeHRM Login
 
 Open Browser to Dashboard Page
     Open Maximized Browser        Chromium
-    Go to Site                https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+    Go to Site                 https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
     Valid OrangeHRM Login
+    Wait Sleep
+
+Open Browser to Table Page
+    Open Maximized Browser    Chromium
+    Go to Site                https://tablepress.org/demo/
     Wait Sleep
 
 Open Browser to Demo Page
@@ -56,3 +61,11 @@ Read DropDown Data
     [Return]    ${data}
     Close Current Excel Document
 
+Write DropDown Data
+  [Arguments]    ${filepath}       ${sheetname}        ${rownum}      @{data}
+    Open Excel Document        ${filepath}        2
+    Get Sheet        ${sheetname}
+    #FOR    ${a}    IN RANGE    0     2
+    Write Excel Row              ${rownum}        ${data}[0]        1    ${sheetname}
+   # END
+    Close Current Excel Document
