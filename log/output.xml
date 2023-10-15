@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20231002 13:31:40.338" rpa="false" schemaversion="4">
-<suite id="s1" name="TableTest" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\TableTest.robot">
-<test id="s1-t1" name="WebTableTest" line="10">
-<kw name="Open Browser to Table Page" library="Resource" type="SETUP">
+<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20231015 14:17:59.502" rpa="false" schemaversion="4">
+<suite id="s1" name="DatePicker" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\DatePicker.robot">
+<test id="s1-t1" name="OneWayDatePicker" line="11">
+<kw name="Open Browser to TurkAir Page" library="Resource" type="SETUP">
 <kw name="Open Maximized Browser" library="Resource">
 <arg>Chromium</arg>
 <kw name="New Browser" library="Browser">
@@ -12,16 +12,16 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20231002 13:31:44.055" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\953eb8df-de7d-4d04-b801-f254e5f56183"}</msg>
-<msg timestamp="20231002 13:31:45.107" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\953eb8df-de7d-4d04-b801-f254e5f56183"}</msg>
-<status status="PASS" starttime="20231002 13:31:44.055" endtime="20231002 13:31:45.107"/>
+<msg timestamp="20231015 14:18:03.314" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\9f3a0c5d-9ca8-4e56-b803-059b529d9ead"}</msg>
+<msg timestamp="20231015 14:18:04.608" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\9f3a0c5d-9ca8-4e56-b803-059b529d9ead"}</msg>
+<status status="PASS" starttime="20231015 14:18:03.314" endtime="20231015 14:18:04.611"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>viewport=${None}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20231002 13:31:45.123" level="INFO">{
+<msg timestamp="20231015 14:18:04.615" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -32,152 +32,1933 @@
   "reducedMotion": "no-preference",
   "viewport": null
 }</msg>
-<msg timestamp="20231002 13:31:45.138" level="INFO">Successfully created context. </msg>
-<msg timestamp="20231002 13:31:45.138" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<status status="PASS" starttime="20231002 13:31:45.107" endtime="20231002 13:31:45.138"/>
+<msg timestamp="20231015 14:18:04.644" level="INFO">Successfully created context. </msg>
+<msg timestamp="20231015 14:18:04.645" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<status status="PASS" starttime="20231015 14:18:04.613" endtime="20231015 14:18:04.645"/>
 </kw>
-<status status="PASS" starttime="20231002 13:31:44.055" endtime="20231002 13:31:45.138"/>
+<status status="PASS" starttime="20231015 14:18:03.313" endtime="20231015 14:18:04.645"/>
 </kw>
 <kw name="Go to Site" library="Resource">
-<arg>https://tablepress.org/demo/</arg>
+<arg>https://www.turkishairlines.com/en-int/index.html</arg>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20231002 13:31:46.243" level="INFO">Successfully initialized new page object and opened url: https://tablepress.org/demo/</msg>
-<status status="PASS" starttime="20231002 13:31:45.138" endtime="20231002 13:31:46.243"/>
+<msg timestamp="20231015 14:18:07.871" level="INFO">Successfully initialized new page object and opened url: https://www.turkishairlines.com/en-int/index.html</msg>
+<status status="PASS" starttime="20231015 14:18:04.647" endtime="20231015 14:18:07.871"/>
 </kw>
-<status status="PASS" starttime="20231002 13:31:45.138" endtime="20231002 13:31:46.249"/>
+<status status="PASS" starttime="20231015 14:18:04.645" endtime="20231015 14:18:07.872"/>
 </kw>
 <kw name="Wait Sleep" library="Resource">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231002 13:31:48.250" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231002 13:31:46.249" endtime="20231002 13:31:48.250"/>
+<msg timestamp="20231015 14:18:09.873" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231015 14:18:07.873" endtime="20231015 14:18:09.873"/>
 </kw>
-<status status="PASS" starttime="20231002 13:31:46.249" endtime="20231002 13:31:48.250"/>
+<status status="PASS" starttime="20231015 14:18:07.872" endtime="20231015 14:18:09.874"/>
 </kw>
-<status status="PASS" starttime="20231002 13:31:44.055" endtime="20231002 13:31:48.250"/>
+<status status="PASS" starttime="20231015 14:18:03.313" endtime="20231015 14:18:09.874"/>
 </kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="cookieWarningMessageNew"]/div/div[2]/div[1]/button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231015 14:18:09.874" endtime="20231015 14:18:10.034"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="one-way"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231015 14:18:10.034" endtime="20231015 14:18:10.255"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="general-booker-datapicker"]/div/div/span[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231015 14:18:10.255" endtime="20231015 14:18:10.720"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${current_month_year}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[1]/div[1]/div</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:11.808" level="INFO">Text: 'October 2023'</msg>
+<msg timestamp="20231015 14:18:11.809" level="INFO">${current_month_year} = October 2023</msg>
+<status status="PASS" starttime="20231015 14:18:10.721" endtime="20231015 14:18:11.809"/>
+</kw>
+<kw name="Wait Sleep" library="Resource">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231015 14:18:13.812" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231015 14:18:11.811" endtime="20231015 14:18:13.813"/>
+</kw>
+<status status="PASS" starttime="20231015 14:18:11.810" endtime="20231015 14:18:13.813"/>
+</kw>
+<if>
+<branch type="IF" condition="$month_year == $current_month_year">
+<kw name="MatchLogic">
+<arg>1</arg>
+<status status="NOT RUN" starttime="20231015 14:18:13.819" endtime="20231015 14:18:13.819"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:13.813" endtime="20231015 14:18:13.820"/>
+</branch>
+<branch type="ELSE">
+<kw name="Calculate Month Difference" library="Resource">
+<var>${months_difference}</var>
+<arg>${month_year}</arg>
+<arg>${current_month_year}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${current_month}</var>
+<arg>datetime.datetime.strptime('${current_month_year}', '%B %Y').month</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231015 14:18:13.830" level="INFO">${current_month} = 10</msg>
+<status status="PASS" starttime="20231015 14:18:13.822" endtime="20231015 14:18:13.830"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${current_year}</var>
+<arg>datetime.datetime.strptime('${current_month_year}', '%B %Y').year</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231015 14:18:13.831" level="INFO">${current_year} = 2023</msg>
+<status status="PASS" starttime="20231015 14:18:13.830" endtime="20231015 14:18:13.831"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${desired_month}</var>
+<arg>datetime.datetime.strptime('${desired_month_year}', '%B %Y').month</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231015 14:18:13.833" level="INFO">${desired_month} = 1</msg>
+<status status="PASS" starttime="20231015 14:18:13.832" endtime="20231015 14:18:13.833"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${desired_year}</var>
+<arg>datetime.datetime.strptime('${desired_month_year}', '%B %Y').year</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231015 14:18:13.835" level="INFO">${desired_year} = 2024</msg>
+<status status="PASS" starttime="20231015 14:18:13.834" endtime="20231015 14:18:13.835"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${months_difference}</var>
+<arg>(${desired_year} - ${current_year}) * 12 + (${desired_month} - ${current_month})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231015 14:18:13.836" level="INFO">${months_difference} = 3</msg>
+<status status="PASS" starttime="20231015 14:18:13.835" endtime="20231015 14:18:13.836"/>
+</kw>
+<msg timestamp="20231015 14:18:13.837" level="INFO">${months_difference} = 3</msg>
+<status status="PASS" starttime="20231015 14:18:13.821" endtime="20231015 14:18:13.837"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Months Difference in number: ${months_difference}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231015 14:18:13.837" level="INFO">Months Difference in number: 3</msg>
+<status status="PASS" starttime="20231015 14:18:13.837" endtime="20231015 14:18:13.838"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>1</value>
+<value>${months_difference+1}</value>
+<iter>
+<var name="${counter}">1</var>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[1]/div/button[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231015 14:18:13.842" endtime="20231015 14:18:14.114"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${counter}</var>
+<arg>${counter+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231015 14:18:14.115" level="INFO">${counter} = 2</msg>
+<status status="PASS" starttime="20231015 14:18:14.114" endtime="20231015 14:18:14.115"/>
+</kw>
+<status status="PASS" starttime="20231015 14:18:13.841" endtime="20231015 14:18:14.116"/>
+</iter>
+<iter>
+<var name="${counter}">2</var>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[1]/div/button[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231015 14:18:14.117" endtime="20231015 14:18:14.438"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${counter}</var>
+<arg>${counter+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231015 14:18:14.444" level="INFO">${counter} = 3</msg>
+<status status="PASS" starttime="20231015 14:18:14.439" endtime="20231015 14:18:14.445"/>
+</kw>
+<status status="PASS" starttime="20231015 14:18:14.116" endtime="20231015 14:18:14.445"/>
+</iter>
+<iter>
+<var name="${counter}">3</var>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[1]/div/button[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231015 14:18:14.447" endtime="20231015 14:18:14.775"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${counter}</var>
+<arg>${counter+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231015 14:18:14.776" level="INFO">${counter} = 4</msg>
+<status status="PASS" starttime="20231015 14:18:14.775" endtime="20231015 14:18:14.777"/>
+</kw>
+<status status="PASS" starttime="20231015 14:18:14.446" endtime="20231015 14:18:14.777"/>
+</iter>
+<status status="PASS" starttime="20231015 14:18:13.838" endtime="20231015 14:18:14.777"/>
+</for>
+<kw name="MatchLogic">
+<arg>1</arg>
 <kw name="Get Element Count" library="Browser">
 <var>${number_of_rows}</var>
-<arg>${selector}</arg>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<msg timestamp="20231002 13:31:48.285" level="INFO">${number_of_rows} = 1</msg>
-<status status="PASS" starttime="20231002 13:31:48.250" endtime="20231002 13:31:48.285"/>
+<msg timestamp="20231015 14:18:14.805" level="INFO">${number_of_rows} = 7</msg>
+<status status="PASS" starttime="20231015 14:18:14.780" endtime="20231015 14:18:14.805"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${number_of_rows}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231002 13:31:48.285" endtime="20231002 13:31:48.288"/>
+<kw name="Get Element Count" library="Browser">
+<var>${number_of_col}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[1]/div</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20231015 14:18:14.825" level="INFO">${number_of_col} = 7</msg>
+<status status="PASS" starttime="20231015 14:18:14.806" endtime="20231015 14:18:14.825"/>
 </kw>
 <for flavor="IN RANGE">
-<var>${INDEX}</var>
-<value>2</value>
-<value>${number_of_rows+2}</value>
-<iter>
-<var name="${INDEX}">2</var>
-<kw name="Get Table Cell Element" library="Browser">
-<var>${CellValue}</var>
-<arg>${selector}</arg>
-<arg>1</arg>
-<arg>${INDEX}</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the Web Element that has the same column index and same row index as the selected elements.</doc>
-<msg timestamp="20231002 13:31:48.315" level="INFO">JavaScript executed successfully.</msg>
-<msg timestamp="20231002 13:31:48.322" level="INFO">Locator found successfully.</msg>
-<msg timestamp="20231002 13:31:48.322" level="INFO">${CellValue} = xpath=//*[@id="tablepress-demo"] &gt;&gt; tr &gt;&gt; nth=2 &gt;&gt; &gt; * &gt;&gt; nth=1</msg>
-<status status="PASS" starttime="20231002 13:31:48.289" endtime="20231002 13:31:48.322"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${value}</var>
-<arg>${CellValue}</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20231002 13:31:48.351" level="INFO">Text: 'Reeves'</msg>
-<msg timestamp="20231002 13:31:48.351" level="INFO">${value} = Reeves</msg>
-<status status="PASS" starttime="20231002 13:31:48.322" endtime="20231002 13:31:48.351"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${value}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231002 13:31:48.351" endtime="20231002 13:31:48.351"/>
-</kw>
-<status status="PASS" starttime="20231002 13:31:48.288" endtime="20231002 13:31:48.351"/>
-</iter>
-<status status="PASS" starttime="20231002 13:31:48.288" endtime="20231002 13:31:48.354"/>
-</for>
-<kw name="Get Table Cell Index" library="Browser">
-<var>${colidx}</var>
-<arg>${selector} &gt;&gt; "Barry"</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the index (0 based) of a table cell within its row.</doc>
-<msg timestamp="20231002 13:31:48.355" level="INFO">${colidx} = 1</msg>
-<status status="PASS" starttime="20231002 13:31:48.354" endtime="20231002 13:31:48.355"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${colidx}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231002 13:31:48.355" endtime="20231002 13:31:48.355"/>
-</kw>
-<kw name="Get Table Row Index" library="Browser">
 <var>${rowidx}</var>
-<arg>${selector} &gt;&gt; "Barry"</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the index (0 based) of a table row.</doc>
-<msg timestamp="20231002 13:31:48.379" level="INFO">${rowidx} = 8</msg>
-<status status="PASS" starttime="20231002 13:31:48.355" endtime="20231002 13:31:48.379"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${rowidx}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231002 13:31:48.379" endtime="20231002 13:31:48.379"/>
-</kw>
-<kw name="Get Table Cell Element" library="Browser">
-<var>${newValue}</var>
-<arg>${selector}</arg>
-<arg>${colidx}</arg>
-<arg>${rowidx}</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the Web Element that has the same column index and same row index as the selected elements.</doc>
-<msg timestamp="20231002 13:31:48.388" level="INFO">JavaScript executed successfully.</msg>
-<msg timestamp="20231002 13:31:48.398" level="INFO">Locator found successfully.</msg>
-<msg timestamp="20231002 13:31:48.398" level="INFO">${newValue} = xpath=//*[@id="tablepress-demo"] &gt;&gt; tr &gt;&gt; nth=8 &gt;&gt; &gt; * &gt;&gt; nth=1</msg>
-<status status="PASS" starttime="20231002 13:31:48.379" endtime="20231002 13:31:48.398"/>
-</kw>
+<value>1</value>
+<value>${number_of_rows+1}</value>
+<iter>
+<var name="${rowidx}">1</var>
+<for flavor="IN RANGE">
+<var>${colidx}</var>
+<value>1</value>
+<value>${number_of_rows+1}</value>
+<iter>
+<var name="${colidx}">1</var>
 <kw name="Get Text" library="Browser">
-<var>${name}</var>
-<arg>${newValue}</arg>
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20231002 13:31:48.407" level="INFO">Text: 'Barry'</msg>
-<msg timestamp="20231002 13:31:48.407" level="INFO">${name} = Barry</msg>
-<status status="PASS" starttime="20231002 13:31:48.398" endtime="20231002 13:31:48.407"/>
+<msg timestamp="20231015 14:18:14.883" level="INFO">Text: 'Mo'</msg>
+<msg timestamp="20231015 14:18:14.883" level="INFO">${actual_day} = Mo</msg>
+<status status="PASS" starttime="20231015 14:18:14.830" endtime="20231015 14:18:14.883"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${name}</arg>
-<arg>Barry</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231002 13:31:48.407" endtime="20231002 13:31:48.407"/>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:14.884" endtime="20231015 14:18:14.884"/>
 </kw>
-<status status="PASS" starttime="20231002 13:31:44.055" endtime="20231002 13:31:48.407"/>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:14.885" endtime="20231015 14:18:14.885"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:14.883" endtime="20231015 14:18:14.885"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:14.883" endtime="20231015 14:18:14.885"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:14.829" endtime="20231015 14:18:14.885"/>
+</iter>
+<iter>
+<var name="${colidx}">2</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:14.943" level="INFO">Text: 'Tu'</msg>
+<msg timestamp="20231015 14:18:14.945" level="INFO">${actual_day} = Tu</msg>
+<status status="PASS" starttime="20231015 14:18:14.886" endtime="20231015 14:18:14.945"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:14.950" endtime="20231015 14:18:14.951"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:14.953" endtime="20231015 14:18:14.953"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:14.947" endtime="20231015 14:18:14.954"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:14.946" endtime="20231015 14:18:14.955"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:14.886" endtime="20231015 14:18:14.955"/>
+</iter>
+<iter>
+<var name="${colidx}">3</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:14.990" level="INFO">Text: 'We'</msg>
+<msg timestamp="20231015 14:18:14.991" level="INFO">${actual_day} = We</msg>
+<status status="PASS" starttime="20231015 14:18:14.957" endtime="20231015 14:18:14.992"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:14.992" endtime="20231015 14:18:14.994"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:14.994" endtime="20231015 14:18:14.994"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:14.992" endtime="20231015 14:18:14.994"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:14.992" endtime="20231015 14:18:14.994"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:14.956" endtime="20231015 14:18:14.994"/>
+</iter>
+<iter>
+<var name="${colidx}">4</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.043" level="INFO">Text: 'Th'</msg>
+<msg timestamp="20231015 14:18:15.044" level="INFO">${actual_day} = Th</msg>
+<status status="PASS" starttime="20231015 14:18:14.995" endtime="20231015 14:18:15.044"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.045" endtime="20231015 14:18:15.046"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.046" endtime="20231015 14:18:15.046"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.045" endtime="20231015 14:18:15.047"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.045" endtime="20231015 14:18:15.047"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:14.994" endtime="20231015 14:18:15.047"/>
+</iter>
+<iter>
+<var name="${colidx}">5</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.082" level="INFO">Text: 'Fr'</msg>
+<msg timestamp="20231015 14:18:15.084" level="INFO">${actual_day} = Fr</msg>
+<status status="PASS" starttime="20231015 14:18:15.048" endtime="20231015 14:18:15.084"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.085" endtime="20231015 14:18:15.086"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.086" endtime="20231015 14:18:15.086"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.085" endtime="20231015 14:18:15.087"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.084" endtime="20231015 14:18:15.087"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.048" endtime="20231015 14:18:15.087"/>
+</iter>
+<iter>
+<var name="${colidx}">6</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.113" level="INFO">Text: 'Sa'</msg>
+<msg timestamp="20231015 14:18:15.113" level="INFO">${actual_day} = Sa</msg>
+<status status="PASS" starttime="20231015 14:18:15.088" endtime="20231015 14:18:15.113"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.114" endtime="20231015 14:18:15.114"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.114" endtime="20231015 14:18:15.114"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.113" endtime="20231015 14:18:15.115"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.113" endtime="20231015 14:18:15.115"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.087" endtime="20231015 14:18:15.115"/>
+</iter>
+<iter>
+<var name="${colidx}">7</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.147" level="INFO">Text: 'Su'</msg>
+<msg timestamp="20231015 14:18:15.147" level="INFO">${actual_day} = Su</msg>
+<status status="PASS" starttime="20231015 14:18:15.116" endtime="20231015 14:18:15.148"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.149" endtime="20231015 14:18:15.150"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.150" endtime="20231015 14:18:15.151"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.148" endtime="20231015 14:18:15.151"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.148" endtime="20231015 14:18:15.153"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.115" endtime="20231015 14:18:15.153"/>
+</iter>
+<status status="PASS" starttime="20231015 14:18:14.828" endtime="20231015 14:18:15.154"/>
+</for>
+<status status="PASS" starttime="20231015 14:18:14.828" endtime="20231015 14:18:15.155"/>
+</iter>
+<iter>
+<var name="${rowidx}">2</var>
+<for flavor="IN RANGE">
+<var>${colidx}</var>
+<value>1</value>
+<value>${number_of_rows+1}</value>
+<iter>
+<var name="${colidx}">1</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.187" level="INFO">Text: '1'</msg>
+<msg timestamp="20231015 14:18:15.189" level="INFO">${actual_day} = 1</msg>
+<status status="PASS" starttime="20231015 14:18:15.157" endtime="20231015 14:18:15.189"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.189" endtime="20231015 14:18:15.189"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.189" endtime="20231015 14:18:15.189"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.189" endtime="20231015 14:18:15.189"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.189" endtime="20231015 14:18:15.189"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.157" endtime="20231015 14:18:15.189"/>
+</iter>
+<iter>
+<var name="${colidx}">2</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.232" level="INFO">Text: '2'</msg>
+<msg timestamp="20231015 14:18:15.234" level="INFO">${actual_day} = 2</msg>
+<status status="PASS" starttime="20231015 14:18:15.190" endtime="20231015 14:18:15.235"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.238" endtime="20231015 14:18:15.238"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.238" endtime="20231015 14:18:15.238"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.236" endtime="20231015 14:18:15.238"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.236" endtime="20231015 14:18:15.239"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.190" endtime="20231015 14:18:15.239"/>
+</iter>
+<iter>
+<var name="${colidx}">3</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.273" level="INFO">Text: '3'</msg>
+<msg timestamp="20231015 14:18:15.274" level="INFO">${actual_day} = 3</msg>
+<status status="PASS" starttime="20231015 14:18:15.240" endtime="20231015 14:18:15.274"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.277" endtime="20231015 14:18:15.278"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.279" endtime="20231015 14:18:15.280"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.274" endtime="20231015 14:18:15.281"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.274" endtime="20231015 14:18:15.282"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.239" endtime="20231015 14:18:15.283"/>
+</iter>
+<iter>
+<var name="${colidx}">4</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.326" level="INFO">Text: '4'</msg>
+<msg timestamp="20231015 14:18:15.326" level="INFO">${actual_day} = 4</msg>
+<status status="PASS" starttime="20231015 14:18:15.286" endtime="20231015 14:18:15.327"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.329" endtime="20231015 14:18:15.330"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.331" endtime="20231015 14:18:15.331"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.327" endtime="20231015 14:18:15.332"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.327" endtime="20231015 14:18:15.332"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.284" endtime="20231015 14:18:15.332"/>
+</iter>
+<iter>
+<var name="${colidx}">5</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.371" level="INFO">Text: '5'</msg>
+<msg timestamp="20231015 14:18:15.371" level="INFO">${actual_day} = 5</msg>
+<status status="PASS" starttime="20231015 14:18:15.334" endtime="20231015 14:18:15.372"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.373" endtime="20231015 14:18:15.373"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.373" endtime="20231015 14:18:15.373"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.372" endtime="20231015 14:18:15.373"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.372" endtime="20231015 14:18:15.375"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.333" endtime="20231015 14:18:15.375"/>
+</iter>
+<iter>
+<var name="${colidx}">6</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.398" level="INFO">Text: '6'</msg>
+<msg timestamp="20231015 14:18:15.398" level="INFO">${actual_day} = 6</msg>
+<status status="PASS" starttime="20231015 14:18:15.376" endtime="20231015 14:18:15.398"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.399" endtime="20231015 14:18:15.399"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.400" endtime="20231015 14:18:15.400"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.399" endtime="20231015 14:18:15.400"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.399" endtime="20231015 14:18:15.401"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.375" endtime="20231015 14:18:15.401"/>
+</iter>
+<iter>
+<var name="${colidx}">7</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.439" level="INFO">Text: '7'</msg>
+<msg timestamp="20231015 14:18:15.440" level="INFO">${actual_day} = 7</msg>
+<status status="PASS" starttime="20231015 14:18:15.402" endtime="20231015 14:18:15.440"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.442" endtime="20231015 14:18:15.443"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.444" endtime="20231015 14:18:15.444"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.441" endtime="20231015 14:18:15.445"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.440" endtime="20231015 14:18:15.446"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.401" endtime="20231015 14:18:15.446"/>
+</iter>
+<status status="PASS" starttime="20231015 14:18:15.155" endtime="20231015 14:18:15.447"/>
+</for>
+<status status="PASS" starttime="20231015 14:18:15.155" endtime="20231015 14:18:15.447"/>
+</iter>
+<iter>
+<var name="${rowidx}">3</var>
+<for flavor="IN RANGE">
+<var>${colidx}</var>
+<value>1</value>
+<value>${number_of_rows+1}</value>
+<iter>
+<var name="${colidx}">1</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.479" level="INFO">Text: '8'</msg>
+<msg timestamp="20231015 14:18:15.479" level="INFO">${actual_day} = 8</msg>
+<status status="PASS" starttime="20231015 14:18:15.450" endtime="20231015 14:18:15.479"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.480" endtime="20231015 14:18:15.481"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.481" endtime="20231015 14:18:15.482"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.479" endtime="20231015 14:18:15.483"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.479" endtime="20231015 14:18:15.483"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.449" endtime="20231015 14:18:15.484"/>
+</iter>
+<iter>
+<var name="${colidx}">2</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.533" level="INFO">Text: '9'</msg>
+<msg timestamp="20231015 14:18:15.534" level="INFO">${actual_day} = 9</msg>
+<status status="PASS" starttime="20231015 14:18:15.486" endtime="20231015 14:18:15.534"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.535" endtime="20231015 14:18:15.535"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.535" endtime="20231015 14:18:15.535"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.534" endtime="20231015 14:18:15.535"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.534" endtime="20231015 14:18:15.536"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.485" endtime="20231015 14:18:15.536"/>
+</iter>
+<iter>
+<var name="${colidx}">3</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.578" level="INFO">Text: '10'</msg>
+<msg timestamp="20231015 14:18:15.579" level="INFO">${actual_day} = 10</msg>
+<status status="PASS" starttime="20231015 14:18:15.537" endtime="20231015 14:18:15.579"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.581" endtime="20231015 14:18:15.581"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.581" endtime="20231015 14:18:15.581"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.580" endtime="20231015 14:18:15.582"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.580" endtime="20231015 14:18:15.582"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.537" endtime="20231015 14:18:15.582"/>
+</iter>
+<iter>
+<var name="${colidx}">4</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.608" level="INFO">Text: '11'</msg>
+<msg timestamp="20231015 14:18:15.610" level="INFO">${actual_day} = 11</msg>
+<status status="PASS" starttime="20231015 14:18:15.582" endtime="20231015 14:18:15.610"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.614" endtime="20231015 14:18:15.615"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.616" endtime="20231015 14:18:15.616"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.612" endtime="20231015 14:18:15.617"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.611" endtime="20231015 14:18:15.618"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.582" endtime="20231015 14:18:15.618"/>
+</iter>
+<iter>
+<var name="${colidx}">5</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.648" level="INFO">Text: '12'</msg>
+<msg timestamp="20231015 14:18:15.650" level="INFO">${actual_day} = 12</msg>
+<status status="PASS" starttime="20231015 14:18:15.620" endtime="20231015 14:18:15.651"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.654" endtime="20231015 14:18:15.655"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.656" endtime="20231015 14:18:15.657"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.651" endtime="20231015 14:18:15.657"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.651" endtime="20231015 14:18:15.658"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.619" endtime="20231015 14:18:15.658"/>
+</iter>
+<iter>
+<var name="${colidx}">6</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.690" level="INFO">Text: '13'</msg>
+<msg timestamp="20231015 14:18:15.691" level="INFO">${actual_day} = 13</msg>
+<status status="PASS" starttime="20231015 14:18:15.660" endtime="20231015 14:18:15.691"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.692" endtime="20231015 14:18:15.693"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.693" endtime="20231015 14:18:15.694"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.692" endtime="20231015 14:18:15.694"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.692" endtime="20231015 14:18:15.694"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.659" endtime="20231015 14:18:15.694"/>
+</iter>
+<iter>
+<var name="${colidx}">7</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.730" level="INFO">Text: '14'</msg>
+<msg timestamp="20231015 14:18:15.731" level="INFO">${actual_day} = 14</msg>
+<status status="PASS" starttime="20231015 14:18:15.695" endtime="20231015 14:18:15.731"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.732" endtime="20231015 14:18:15.733"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.733" endtime="20231015 14:18:15.733"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.731" endtime="20231015 14:18:15.733"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.731" endtime="20231015 14:18:15.733"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.695" endtime="20231015 14:18:15.733"/>
+</iter>
+<status status="PASS" starttime="20231015 14:18:15.448" endtime="20231015 14:18:15.733"/>
+</for>
+<status status="PASS" starttime="20231015 14:18:15.447" endtime="20231015 14:18:15.733"/>
+</iter>
+<iter>
+<var name="${rowidx}">4</var>
+<for flavor="IN RANGE">
+<var>${colidx}</var>
+<value>1</value>
+<value>${number_of_rows+1}</value>
+<iter>
+<var name="${colidx}">1</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.771" level="INFO">Text: '15'</msg>
+<msg timestamp="20231015 14:18:15.772" level="INFO">${actual_day} = 15</msg>
+<status status="PASS" starttime="20231015 14:18:15.737" endtime="20231015 14:18:15.772"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231015 14:18:15.775" endtime="20231015 14:18:15.776"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231015 14:18:15.776" endtime="20231015 14:18:15.941"/>
+</kw>
+<status status="PASS" starttime="20231015 14:18:15.772" endtime="20231015 14:18:15.941"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.772" endtime="20231015 14:18:15.941"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.737" endtime="20231015 14:18:15.941"/>
+</iter>
+<iter>
+<var name="${colidx}">2</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:15.986" level="INFO">Text: '16'</msg>
+<msg timestamp="20231015 14:18:15.986" level="INFO">${actual_day} = 16</msg>
+<status status="PASS" starttime="20231015 14:18:15.942" endtime="20231015 14:18:15.986"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.987" endtime="20231015 14:18:15.988"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:15.988" endtime="20231015 14:18:15.989"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:15.987" endtime="20231015 14:18:15.989"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:15.987" endtime="20231015 14:18:15.989"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.942" endtime="20231015 14:18:15.989"/>
+</iter>
+<iter>
+<var name="${colidx}">3</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.018" level="INFO">Text: '17'</msg>
+<msg timestamp="20231015 14:18:16.019" level="INFO">${actual_day} = 17</msg>
+<status status="PASS" starttime="20231015 14:18:15.990" endtime="20231015 14:18:16.019"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.021" endtime="20231015 14:18:16.022"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.022" endtime="20231015 14:18:16.023"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.020" endtime="20231015 14:18:16.023"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.020" endtime="20231015 14:18:16.024"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:15.990" endtime="20231015 14:18:16.024"/>
+</iter>
+<iter>
+<var name="${colidx}">4</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.052" level="INFO">Text: '18'</msg>
+<msg timestamp="20231015 14:18:16.054" level="INFO">${actual_day} = 18</msg>
+<status status="PASS" starttime="20231015 14:18:16.027" endtime="20231015 14:18:16.054"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.054" endtime="20231015 14:18:16.055"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.055" endtime="20231015 14:18:16.055"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.054" endtime="20231015 14:18:16.055"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.054" endtime="20231015 14:18:16.056"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.026" endtime="20231015 14:18:16.056"/>
+</iter>
+<iter>
+<var name="${colidx}">5</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.092" level="INFO">Text: '19'</msg>
+<msg timestamp="20231015 14:18:16.094" level="INFO">${actual_day} = 19</msg>
+<status status="PASS" starttime="20231015 14:18:16.056" endtime="20231015 14:18:16.096"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.099" endtime="20231015 14:18:16.100"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.100" endtime="20231015 14:18:16.101"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.097" endtime="20231015 14:18:16.102"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.097" endtime="20231015 14:18:16.102"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.056" endtime="20231015 14:18:16.102"/>
+</iter>
+<iter>
+<var name="${colidx}">6</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.121" level="INFO">Text: '20'</msg>
+<msg timestamp="20231015 14:18:16.122" level="INFO">${actual_day} = 20</msg>
+<status status="PASS" starttime="20231015 14:18:16.104" endtime="20231015 14:18:16.122"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.124" endtime="20231015 14:18:16.124"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.124" endtime="20231015 14:18:16.125"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.123" endtime="20231015 14:18:16.125"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.123" endtime="20231015 14:18:16.126"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.103" endtime="20231015 14:18:16.126"/>
+</iter>
+<iter>
+<var name="${colidx}">7</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.165" level="INFO">Text: '21'</msg>
+<msg timestamp="20231015 14:18:16.166" level="INFO">${actual_day} = 21</msg>
+<status status="PASS" starttime="20231015 14:18:16.128" endtime="20231015 14:18:16.166"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.166" endtime="20231015 14:18:16.167"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.167" endtime="20231015 14:18:16.167"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.166" endtime="20231015 14:18:16.167"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.166" endtime="20231015 14:18:16.168"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.127" endtime="20231015 14:18:16.168"/>
+</iter>
+<status status="PASS" starttime="20231015 14:18:15.734" endtime="20231015 14:18:16.169"/>
+</for>
+<status status="PASS" starttime="20231015 14:18:15.734" endtime="20231015 14:18:16.169"/>
+</iter>
+<iter>
+<var name="${rowidx}">5</var>
+<for flavor="IN RANGE">
+<var>${colidx}</var>
+<value>1</value>
+<value>${number_of_rows+1}</value>
+<iter>
+<var name="${colidx}">1</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.197" level="INFO">Text: '22'</msg>
+<msg timestamp="20231015 14:18:16.198" level="INFO">${actual_day} = 22</msg>
+<status status="PASS" starttime="20231015 14:18:16.170" endtime="20231015 14:18:16.198"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.200" endtime="20231015 14:18:16.200"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.201" endtime="20231015 14:18:16.201"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.198" endtime="20231015 14:18:16.201"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.198" endtime="20231015 14:18:16.201"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.170" endtime="20231015 14:18:16.201"/>
+</iter>
+<iter>
+<var name="${colidx}">2</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.250" level="INFO">Text: '23'</msg>
+<msg timestamp="20231015 14:18:16.250" level="INFO">${actual_day} = 23</msg>
+<status status="PASS" starttime="20231015 14:18:16.204" endtime="20231015 14:18:16.250"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.252" endtime="20231015 14:18:16.253"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.254" endtime="20231015 14:18:16.254"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.251" endtime="20231015 14:18:16.255"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.251" endtime="20231015 14:18:16.255"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.202" endtime="20231015 14:18:16.256"/>
+</iter>
+<iter>
+<var name="${colidx}">3</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.320" level="INFO">Text: '24'</msg>
+<msg timestamp="20231015 14:18:16.320" level="INFO">${actual_day} = 24</msg>
+<status status="PASS" starttime="20231015 14:18:16.257" endtime="20231015 14:18:16.321"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.322" endtime="20231015 14:18:16.322"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.324" endtime="20231015 14:18:16.324"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.321" endtime="20231015 14:18:16.324"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.321" endtime="20231015 14:18:16.325"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.256" endtime="20231015 14:18:16.325"/>
+</iter>
+<iter>
+<var name="${colidx}">4</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.364" level="INFO">Text: '25'</msg>
+<msg timestamp="20231015 14:18:16.364" level="INFO">${actual_day} = 25</msg>
+<status status="PASS" starttime="20231015 14:18:16.326" endtime="20231015 14:18:16.365"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.366" endtime="20231015 14:18:16.368"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.369" endtime="20231015 14:18:16.370"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.365" endtime="20231015 14:18:16.370"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.365" endtime="20231015 14:18:16.370"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.325" endtime="20231015 14:18:16.371"/>
+</iter>
+<iter>
+<var name="${colidx}">5</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.411" level="INFO">Text: '26'</msg>
+<msg timestamp="20231015 14:18:16.411" level="INFO">${actual_day} = 26</msg>
+<status status="PASS" starttime="20231015 14:18:16.372" endtime="20231015 14:18:16.411"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.413" endtime="20231015 14:18:16.415"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.418" endtime="20231015 14:18:16.419"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.412" endtime="20231015 14:18:16.421"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.411" endtime="20231015 14:18:16.421"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.371" endtime="20231015 14:18:16.421"/>
+</iter>
+<iter>
+<var name="${colidx}">6</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.514" level="INFO">Text: '27'</msg>
+<msg timestamp="20231015 14:18:16.514" level="INFO">${actual_day} = 27</msg>
+<status status="PASS" starttime="20231015 14:18:16.422" endtime="20231015 14:18:16.515"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.516" endtime="20231015 14:18:16.516"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.516" endtime="20231015 14:18:16.517"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.515" endtime="20231015 14:18:16.517"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.515" endtime="20231015 14:18:16.517"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.422" endtime="20231015 14:18:16.517"/>
+</iter>
+<iter>
+<var name="${colidx}">7</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.554" level="INFO">Text: '28'</msg>
+<msg timestamp="20231015 14:18:16.555" level="INFO">${actual_day} = 28</msg>
+<status status="PASS" starttime="20231015 14:18:16.518" endtime="20231015 14:18:16.555"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.558" endtime="20231015 14:18:16.558"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.558" endtime="20231015 14:18:16.559"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.556" endtime="20231015 14:18:16.559"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.556" endtime="20231015 14:18:16.559"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.517" endtime="20231015 14:18:16.559"/>
+</iter>
+<status status="PASS" starttime="20231015 14:18:16.169" endtime="20231015 14:18:16.559"/>
+</for>
+<status status="PASS" starttime="20231015 14:18:16.169" endtime="20231015 14:18:16.559"/>
+</iter>
+<iter>
+<var name="${rowidx}">6</var>
+<for flavor="IN RANGE">
+<var>${colidx}</var>
+<value>1</value>
+<value>${number_of_rows+1}</value>
+<iter>
+<var name="${colidx}">1</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.596" level="INFO">Text: '29'</msg>
+<msg timestamp="20231015 14:18:16.596" level="INFO">${actual_day} = 29</msg>
+<status status="PASS" starttime="20231015 14:18:16.564" endtime="20231015 14:18:16.597"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.601" endtime="20231015 14:18:16.601"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.602" endtime="20231015 14:18:16.602"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.599" endtime="20231015 14:18:16.602"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.598" endtime="20231015 14:18:16.602"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.563" endtime="20231015 14:18:16.602"/>
+</iter>
+<iter>
+<var name="${colidx}">2</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.631" level="INFO">Text: '30'</msg>
+<msg timestamp="20231015 14:18:16.631" level="INFO">${actual_day} = 30</msg>
+<status status="PASS" starttime="20231015 14:18:16.603" endtime="20231015 14:18:16.631"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.632" endtime="20231015 14:18:16.632"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.632" endtime="20231015 14:18:16.633"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.632" endtime="20231015 14:18:16.634"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.631" endtime="20231015 14:18:16.634"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.603" endtime="20231015 14:18:16.634"/>
+</iter>
+<iter>
+<var name="${colidx}">3</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.675" level="INFO">Text: '31'</msg>
+<msg timestamp="20231015 14:18:16.675" level="INFO">${actual_day} = 31</msg>
+<status status="PASS" starttime="20231015 14:18:16.636" endtime="20231015 14:18:16.675"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.676" endtime="20231015 14:18:16.676"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.677" endtime="20231015 14:18:16.677"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.676" endtime="20231015 14:18:16.678"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.675" endtime="20231015 14:18:16.678"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.635" endtime="20231015 14:18:16.679"/>
+</iter>
+<iter>
+<var name="${colidx}">4</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.752" level="INFO">Text: '1'</msg>
+<msg timestamp="20231015 14:18:16.752" level="INFO">${actual_day} = 1</msg>
+<status status="PASS" starttime="20231015 14:18:16.680" endtime="20231015 14:18:16.752"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.755" endtime="20231015 14:18:16.756"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.756" endtime="20231015 14:18:16.756"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.754" endtime="20231015 14:18:16.757"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.754" endtime="20231015 14:18:16.757"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.679" endtime="20231015 14:18:16.757"/>
+</iter>
+<iter>
+<var name="${colidx}">5</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.816" level="INFO">Text: '2'</msg>
+<msg timestamp="20231015 14:18:16.816" level="INFO">${actual_day} = 2</msg>
+<status status="PASS" starttime="20231015 14:18:16.758" endtime="20231015 14:18:16.816"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.818" endtime="20231015 14:18:16.818"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.818" endtime="20231015 14:18:16.818"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.817" endtime="20231015 14:18:16.818"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.817" endtime="20231015 14:18:16.818"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.757" endtime="20231015 14:18:16.819"/>
+</iter>
+<iter>
+<var name="${colidx}">6</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.843" level="INFO">Text: '3'</msg>
+<msg timestamp="20231015 14:18:16.845" level="INFO">${actual_day} = 3</msg>
+<status status="PASS" starttime="20231015 14:18:16.820" endtime="20231015 14:18:16.846"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.848" endtime="20231015 14:18:16.850"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.851" endtime="20231015 14:18:16.852"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.847" endtime="20231015 14:18:16.852"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.847" endtime="20231015 14:18:16.852"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.819" endtime="20231015 14:18:16.852"/>
+</iter>
+<iter>
+<var name="${colidx}">7</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.899" level="INFO">Text: '4'</msg>
+<msg timestamp="20231015 14:18:16.899" level="INFO">${actual_day} = 4</msg>
+<status status="PASS" starttime="20231015 14:18:16.855" endtime="20231015 14:18:16.899"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.900" endtime="20231015 14:18:16.901"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.901" endtime="20231015 14:18:16.901"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.900" endtime="20231015 14:18:16.901"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.900" endtime="20231015 14:18:16.902"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.854" endtime="20231015 14:18:16.902"/>
+</iter>
+<status status="PASS" starttime="20231015 14:18:16.561" endtime="20231015 14:18:16.903"/>
+</for>
+<status status="PASS" starttime="20231015 14:18:16.560" endtime="20231015 14:18:16.903"/>
+</iter>
+<iter>
+<var name="${rowidx}">7</var>
+<for flavor="IN RANGE">
+<var>${colidx}</var>
+<value>1</value>
+<value>${number_of_rows+1}</value>
+<iter>
+<var name="${colidx}">1</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.946" level="INFO">Text: '5'</msg>
+<msg timestamp="20231015 14:18:16.947" level="INFO">${actual_day} = 5</msg>
+<status status="PASS" starttime="20231015 14:18:16.907" endtime="20231015 14:18:16.947"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.951" endtime="20231015 14:18:16.952"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.952" endtime="20231015 14:18:16.953"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.948" endtime="20231015 14:18:16.954"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.948" endtime="20231015 14:18:16.955"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.906" endtime="20231015 14:18:16.955"/>
+</iter>
+<iter>
+<var name="${colidx}">2</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:16.982" level="INFO">Text: '6'</msg>
+<msg timestamp="20231015 14:18:16.982" level="INFO">${actual_day} = 6</msg>
+<status status="PASS" starttime="20231015 14:18:16.956" endtime="20231015 14:18:16.982"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.982" endtime="20231015 14:18:16.984"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:16.984" endtime="20231015 14:18:16.984"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:16.982" endtime="20231015 14:18:16.984"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:16.982" endtime="20231015 14:18:16.984"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.956" endtime="20231015 14:18:16.984"/>
+</iter>
+<iter>
+<var name="${colidx}">3</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:17.026" level="INFO">Text: '7'</msg>
+<msg timestamp="20231015 14:18:17.027" level="INFO">${actual_day} = 7</msg>
+<status status="PASS" starttime="20231015 14:18:16.985" endtime="20231015 14:18:17.027"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.030" endtime="20231015 14:18:17.031"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.031" endtime="20231015 14:18:17.033"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:17.029" endtime="20231015 14:18:17.033"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:17.028" endtime="20231015 14:18:17.033"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:16.985" endtime="20231015 14:18:17.033"/>
+</iter>
+<iter>
+<var name="${colidx}">4</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:17.072" level="INFO">Text: '8'</msg>
+<msg timestamp="20231015 14:18:17.072" level="INFO">${actual_day} = 8</msg>
+<status status="PASS" starttime="20231015 14:18:17.035" endtime="20231015 14:18:17.072"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.077" endtime="20231015 14:18:17.078"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.078" endtime="20231015 14:18:17.079"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:17.074" endtime="20231015 14:18:17.079"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:17.074" endtime="20231015 14:18:17.080"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:17.034" endtime="20231015 14:18:17.080"/>
+</iter>
+<iter>
+<var name="${colidx}">5</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:17.114" level="INFO">Text: '9'</msg>
+<msg timestamp="20231015 14:18:17.115" level="INFO">${actual_day} = 9</msg>
+<status status="PASS" starttime="20231015 14:18:17.082" endtime="20231015 14:18:17.115"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.117" endtime="20231015 14:18:17.118"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.118" endtime="20231015 14:18:17.119"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:17.116" endtime="20231015 14:18:17.120"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:17.115" endtime="20231015 14:18:17.120"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:17.081" endtime="20231015 14:18:17.121"/>
+</iter>
+<iter>
+<var name="${colidx}">6</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:17.154" level="INFO">Text: '10'</msg>
+<msg timestamp="20231015 14:18:17.156" level="INFO">${actual_day} = 10</msg>
+<status status="PASS" starttime="20231015 14:18:17.122" endtime="20231015 14:18:17.157"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.158" endtime="20231015 14:18:17.158"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.159" endtime="20231015 14:18:17.159"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:17.157" endtime="20231015 14:18:17.159"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:17.157" endtime="20231015 14:18:17.159"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:17.121" endtime="20231015 14:18:17.160"/>
+</iter>
+<iter>
+<var name="${colidx}">7</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_day}</var>
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231015 14:18:17.209" level="INFO">Text: '11'</msg>
+<msg timestamp="20231015 14:18:17.210" level="INFO">${actual_day} = 11</msg>
+<status status="PASS" starttime="20231015 14:18:17.160" endtime="20231015 14:18:17.210"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_day == $trip_day">
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Day Matched"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.211" endtime="20231015 14:18:17.212"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[2]/div[1]/div/div[2]/div[${index}]/div[2]/div[${rowidx}]/div[${colidx}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20231015 14:18:17.212" endtime="20231015 14:18:17.214"/>
+</kw>
+<status status="NOT RUN" starttime="20231015 14:18:17.211" endtime="20231015 14:18:17.214"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:17.210" endtime="20231015 14:18:17.214"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:17.160" endtime="20231015 14:18:17.214"/>
+</iter>
+<status status="PASS" starttime="20231015 14:18:16.906" endtime="20231015 14:18:17.214"/>
+</for>
+<status status="PASS" starttime="20231015 14:18:16.905" endtime="20231015 14:18:17.214"/>
+</iter>
+<status status="PASS" starttime="20231015 14:18:14.826" endtime="20231015 14:18:17.215"/>
+</for>
+<kw name="Click" library="Browser">
+<arg>//*[@id="flight-tab-pane"]/div/div[4]/div/div/div/div[1]/div/button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231015 14:18:17.216" endtime="20231015 14:18:17.430"/>
+</kw>
+<kw name="Wait Sleep" library="Resource">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231015 14:18:19.435" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231015 14:18:17.434" endtime="20231015 14:18:19.435"/>
+</kw>
+<status status="PASS" starttime="20231015 14:18:17.431" endtime="20231015 14:18:19.435"/>
+</kw>
+<status status="PASS" starttime="20231015 14:18:14.778" endtime="20231015 14:18:19.435"/>
+</kw>
+<status status="PASS" starttime="20231015 14:18:13.820" endtime="20231015 14:18:19.435"/>
+</branch>
+<status status="PASS" starttime="20231015 14:18:13.813" endtime="20231015 14:18:19.436"/>
+</if>
+<status status="PASS" starttime="20231015 14:18:03.309" endtime="20231015 14:18:19.436"/>
 </test>
-<status status="PASS" starttime="20231002 13:31:40.338" endtime="20231002 13:31:48.508"/>
+<status status="PASS" starttime="20231015 14:17:59.505" endtime="20231015 14:18:19.685"/>
 </suite>
 <statistics>
 <total>
@@ -186,7 +1967,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TableTest">TableTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="DatePicker">DatePicker</stat>
 </suite>
 </statistics>
 <errors>
