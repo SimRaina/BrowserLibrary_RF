@@ -42,7 +42,7 @@ WriteDataToExcel
     ${year}            Get Selected Options    //div[4]/div/select[3]
 
     @{data}            Create List  ${day}   ${month}  ${year}
-    Write DropDown Data   ${CURDIR}${/}\\Data\\Data.xlsx    date        14       @{data}
+    #Write DropDown Data   ${CURDIR}${/}\\Data\\Data.xlsx    date        14       @{data}
     Wait Sleep
 
 

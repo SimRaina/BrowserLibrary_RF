@@ -1,66 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20240404 15:23:40.616" rpa="false" schemaversion="4">
-<suite id="s1" name="TestTemplate2" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\TestTemplate2.robot">
-<test id="s1-t1" name="Simple Addition" line="4">
-<kw name="Addition Test">
-<arg>2</arg>
-<arg>3</arg>
-<arg>5</arg>
-<kw name="Evaluate" library="BuiltIn">
-<var>${result}</var>
-<arg>${a} + ${b}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240404 15:23:40.665" level="INFO">${result} = 5</msg>
-<status status="PASS" starttime="20240404 15:23:40.663" endtime="20240404 15:23:40.671"/>
+<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20240407 18:57:10.618" rpa="false" schemaversion="4">
+<suite id="s1" name="ImageHorizon" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\ImageHorizon.robot">
+<test id="s1-t1" name="Test1" line="16">
+<kw name="Open Maximized Browser" library="Resource" type="SETUP">
+<arg>${browser}</arg>
+<kw name="New Browser" library="Browser">
+<arg>browser=${browser}</arg>
+<arg>headless=false</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20240407 18:57:12.678" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\b8ef46d2-04fc-48bb-95ee-9aadd58438e6"}</msg>
+<msg timestamp="20240407 18:57:13.634" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\b8ef46d2-04fc-48bb-95ee-9aadd58438e6"}</msg>
+<status status="PASS" starttime="20240407 18:57:12.677" endtime="20240407 18:57:13.636"/>
 </kw>
-<kw name="Should Be Equal As Numbers" library="BuiltIn">
-<arg>${result}</arg>
-<arg>${expected}</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20240404 15:23:40.673" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20240404 15:23:40.671" endtime="20240404 15:23:40.673"/>
+<kw name="New Context" library="Browser">
+<arg>viewport=${None}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20240407 18:57:13.640" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": "",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": null
+}</msg>
+<msg timestamp="20240407 18:57:13.671" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240407 18:57:13.672" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<status status="PASS" starttime="20240407 18:57:13.637" endtime="20240407 18:57:13.672"/>
 </kw>
-<status status="PASS" starttime="20240404 15:23:40.662" endtime="20240404 15:23:40.673"/>
+<status status="PASS" starttime="20240407 18:57:12.677" endtime="20240407 18:57:13.673"/>
 </kw>
-<status status="PASS" starttime="20240404 15:23:40.659" endtime="20240404 15:23:40.673"/>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20240407 18:57:17.617" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/login</msg>
+<status status="PASS" starttime="20240407 18:57:13.673" endtime="20240407 18:57:17.619"/>
+</kw>
+<kw name="Click Image" library="ImageHorizonLibrary">
+<arg>Username</arg>
+<doc>Finds the reference image on screen and clicks it once.</doc>
+<msg timestamp="20240407 18:57:17.853" level="INFO">Image "C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\Images\username.png" found at Box(left=209, top=425, width=754, height=104)</msg>
+<msg timestamp="20240407 18:57:17.854" level="INFO">Clicking image "Username" in position (586, 477)</msg>
+<status status="PASS" starttime="20240407 18:57:17.620" endtime="20240407 18:57:17.965"/>
+</kw>
+<kw name="Type" library="ImageHorizonLibrary">
+<arg>tomsmith</arg>
+<doc>Type text and keyboard keys.</doc>
+<status status="PASS" starttime="20240407 18:57:17.967" endtime="20240407 18:57:18.083"/>
+</kw>
+<kw name="Click Image" library="ImageHorizonLibrary">
+<arg>Password</arg>
+<doc>Finds the reference image on screen and clicks it once.</doc>
+<msg timestamp="20240407 18:57:18.285" level="INFO">Image "C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\Images\password.png" found at Box(left=209, top=532, width=754, height=92)</msg>
+<msg timestamp="20240407 18:57:18.287" level="INFO">Clicking image "Password" in position (586, 578)</msg>
+<status status="PASS" starttime="20240407 18:57:18.085" endtime="20240407 18:57:18.398"/>
+</kw>
+<kw name="Type" library="ImageHorizonLibrary">
+<arg>${password}</arg>
+<doc>Type text and keyboard keys.</doc>
+<status status="PASS" starttime="20240407 18:57:18.399" endtime="20240407 18:57:18.545"/>
+</kw>
+<kw name="Click Image" library="ImageHorizonLibrary">
+<arg>Login Button</arg>
+<doc>Finds the reference image on screen and clicks it once.</doc>
+<msg timestamp="20240407 18:57:18.798" level="INFO">Image "C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\Images\login_button.png" found at Box(left=209, top=619, width=283, height=116)</msg>
+<msg timestamp="20240407 18:57:18.799" level="INFO">Clicking image "Login Button" in position (350, 677)</msg>
+<status status="PASS" starttime="20240407 18:57:18.546" endtime="20240407 18:57:18.915"/>
+</kw>
+<kw name="Pause" library="ImageHorizonLibrary">
+<doc>Shows a dialog that must be dismissed with manually clicking.</doc>
+<status status="PASS" starttime="20240407 18:57:18.916" endtime="20240407 18:57:30.998"/>
+</kw>
+<status status="PASS" starttime="20240407 18:57:12.667" endtime="20240407 18:57:30.999"/>
 </test>
-<test id="s1-t2" name="Subtraction" line="8">
-<kw name="Subtraction Test">
-<arg>7</arg>
-<arg>4</arg>
-<arg>3</arg>
-<kw name="Evaluate" library="BuiltIn">
-<var>${result}</var>
-<arg>${a} - ${b}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240404 15:23:40.681" level="INFO">${result} = 3</msg>
-<status status="PASS" starttime="20240404 15:23:40.680" endtime="20240404 15:23:40.681"/>
-</kw>
-<kw name="Should Be Equal As Numbers" library="BuiltIn">
-<arg>${result}</arg>
-<arg>${expected}</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20240404 15:23:40.682" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20240404 15:23:40.681" endtime="20240404 15:23:40.685"/>
-</kw>
-<status status="PASS" starttime="20240404 15:23:40.677" endtime="20240404 15:23:40.685"/>
-</kw>
-<status status="PASS" starttime="20240404 15:23:40.675" endtime="20240404 15:23:40.686"/>
-</test>
-<status status="PASS" starttime="20240404 15:23:40.624" endtime="20240404 15:23:40.686"/>
+<status status="PASS" starttime="20240407 18:57:10.620" endtime="20240407 18:57:31.162"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="TestTemplate2">TestTemplate2</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="ImageHorizon">ImageHorizon</stat>
 </suite>
 </statistics>
 <errors>
