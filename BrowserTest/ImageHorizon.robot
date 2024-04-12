@@ -1,7 +1,7 @@
 *** Settings ***
 Library       Browser
 Library       ImageHorizonLibrary      reference_folder=${CURDIR}${/}Images
-Test Setup    Open Maximized Browser   ${browser}
+Test Setup    Open Maximized URL   ${browser}   ${url}
 Resource       ../Resource.robot
 
 *** Variables ***
@@ -14,8 +14,6 @@ ${password}         SuperSecretPassword!
 
 *** Test Cases ***
 Test1
-    New Page       ${url}
-
     Click Image    Username
     Type           tomsmith
     Click Image    Password

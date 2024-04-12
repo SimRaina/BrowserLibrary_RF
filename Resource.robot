@@ -9,6 +9,11 @@ Open Maximized Browser
     New Browser    browser=${browser}    headless=false   args=["--start-maximized"]
     New Context    viewport=${None}
 
+Open Maximized URL
+    [Arguments]    ${browser}   ${url}
+    New Persistent Context   browser=${browser}    headless=false   args=["--start-maximized"]    viewport=${None}    url=${url}
+
+
 Go to Site
     [Arguments]    ${url}
     New Page       ${url}
