@@ -2,6 +2,7 @@
 Library   Browser
 Library   ExcelLibrary
 Library   DateTime
+Library   Collections
 
 *** Keywords ***
 Open Maximized Browser
@@ -12,7 +13,6 @@ Open Maximized Browser
 Open Maximized URL
     [Arguments]    ${browser}   ${url}
     New Persistent Context   browser=${browser}    headless=false   args=["--start-maximized"]    viewport=${None}    url=${url}
-
 
 Go to Site
     [Arguments]    ${url}
@@ -57,6 +57,10 @@ Open Browser to Frame Page
      Open Maximized Browser    Chromium
      Go to Site                https://demoqa.com/frames
 
+Open Browser to Droppable Page
+     Open Maximized Browser    Chromium
+     Go to Site                https://demoqa.com/droppable
+
 Open Browser to SelectOptions Page
      Open Maximized Browser    Chromium
      Go to Site                https://demo.nopcommerce.com/digital-downloads
@@ -82,3 +86,17 @@ Calculate Month Difference
                                        #  (2024 - 2023) * 12 + (8-10) = 1 * 12 - 2 = 10
                                        # This difference will be equal to the clicks to go from current to desired month year in date picker
     [Return]    ${months_difference}
+
+ Calculate Drag And Drop Coordinates
+   &{drag}       Get BoundingBox             //div[@id='draggable']  # to get x,y coordinates
+   # it will have key value pair, so can be stored in dictionary variable
+   &{drop}       Get BoundingBox             //div[1]/div/div[@id='droppable']
+   # fetch only values from dictionary and store in a list. We don't need Keys
+   # Bounding Box will give 4 values, we need 2 of them. x, y coordinates
+   @{list_drag}     Get Dictionary Values       ${drag}
+   @{list_drop}     Get Dictionary Values       ${drop}
+   ${x_drag}       Set Variable     ${list_drag}[2]
+   ${y_drag}       Set Variable     ${list_drag}[3]
+   ${x_drop}       Set Variable     ${list_drop}[2]
+   ${y_drop}       Set Variable     ${list_drop}[3]
+   [Return]  ${x_drag}  ${y_drag}   ${x_drop}  ${y_drop}
