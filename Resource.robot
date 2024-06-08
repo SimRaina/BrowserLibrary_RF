@@ -61,6 +61,10 @@ Open Browser to Droppable Page
      Open Maximized Browser    Chromium
      Go to Site                https://demoqa.com/droppable
 
+Open Browser to guru99 Page
+     Open Maximized Browser  Chromium
+     Go to Site              http://demo.guru99.com/test/cookie/selenium_aut.php
+
 Open Browser to SelectOptions Page
      Open Maximized Browser    Chromium
      Go to Site                https://demo.nopcommerce.com/digital-downloads
