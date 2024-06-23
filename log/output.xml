@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20240605 19:08:54.660" rpa="false" schemaversion="4">
-<suite id="s1" name="CookiesTest" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\CookiesTest.robot">
-<test id="s1-t1" name="FirstTest" line="7">
-<kw name="Open Browser to guru99 Page" library="Resource" type="SETUP">
+<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20240620 22:09:33.089" rpa="false" schemaversion="4">
+<suite id="s1" name="Assertions" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\Assertions.robot">
+<test id="s1-t1" name="AssertionTest" line="11">
+<kw name="Open Browser to Register Page" library="Resource" type="SETUP">
 <kw name="Open Maximized Browser" library="Resource">
 <arg>Chromium</arg>
 <kw name="New Browser" library="Browser">
@@ -12,16 +12,16 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20240605 19:09:00.347" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\24d7457d-ac32-4e37-93c0-fdb4a8d378a3"}</msg>
-<msg timestamp="20240605 19:09:01.853" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\24d7457d-ac32-4e37-93c0-fdb4a8d378a3"}</msg>
-<status status="PASS" starttime="20240605 19:09:00.344" endtime="20240605 19:09:01.854"/>
+<msg timestamp="20240620 22:09:34.436" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\8d09665f-5899-417d-958c-eb92ab9849a8"}</msg>
+<msg timestamp="20240620 22:09:35.216" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\8d09665f-5899-417d-958c-eb92ab9849a8"}</msg>
+<status status="PASS" starttime="20240620 22:09:34.436" endtime="20240620 22:09:35.216"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>viewport=${None}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20240605 19:09:01.855" level="INFO">{
+<msg timestamp="20240620 22:09:35.216" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -32,189 +32,126 @@
   "reducedMotion": "no-preference",
   "viewport": null
 }</msg>
-<msg timestamp="20240605 19:09:01.896" level="INFO">Successfully created context. </msg>
-<msg timestamp="20240605 19:09:01.896" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<status status="PASS" starttime="20240605 19:09:01.854" endtime="20240605 19:09:01.896"/>
+<msg timestamp="20240620 22:09:35.232" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240620 22:09:35.232" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<status status="PASS" starttime="20240620 22:09:35.216" endtime="20240620 22:09:35.232"/>
 </kw>
-<status status="PASS" starttime="20240605 19:09:00.342" endtime="20240605 19:09:01.897"/>
+<status status="PASS" starttime="20240620 22:09:34.436" endtime="20240620 22:09:35.232"/>
 </kw>
 <kw name="Go to Site" library="Resource">
-<arg>http://demo.guru99.com/test/cookie/selenium_aut.php</arg>
+<arg>https://demo.nopcommerce.com/register</arg>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20240605 19:09:04.956" level="INFO">Successfully initialized new page object and opened url: http://demo.guru99.com/test/cookie/selenium_aut.php</msg>
-<status status="PASS" starttime="20240605 19:09:01.898" endtime="20240605 19:09:04.956"/>
+<msg timestamp="20240620 22:09:36.600" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/register</msg>
+<status status="PASS" starttime="20240620 22:09:35.232" endtime="20240620 22:09:36.600"/>
 </kw>
-<status status="PASS" starttime="20240605 19:09:01.897" endtime="20240605 19:09:04.957"/>
+<status status="PASS" starttime="20240620 22:09:35.232" endtime="20240620 22:09:36.600"/>
 </kw>
-<status status="PASS" starttime="20240605 19:09:00.339" endtime="20240605 19:09:04.957"/>
+<kw name="Wait Sleep" library="Resource">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240620 22:09:38.601" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240620 22:09:36.600" endtime="20240620 22:09:38.601"/>
 </kw>
-<kw name="Type Text" library="Browser">
-<arg>xpath=//input[@name="username"]</arg>
-<arg>abc123</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20240605 19:09:04.958" level="INFO">Types the text 'abc123' in the given field.</msg>
-<status status="PASS" starttime="20240605 19:09:04.958" endtime="20240605 19:09:05.069"/>
+<status status="PASS" starttime="20240620 22:09:36.600" endtime="20240620 22:09:38.601"/>
 </kw>
-<kw name="Type Text" library="Browser">
-<arg>xpath=//input[@name="password"]</arg>
-<arg>123xyz</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20240605 19:09:05.071" level="INFO">Types the text '123xyz' in the given field.</msg>
-<status status="PASS" starttime="20240605 19:09:05.070" endtime="20240605 19:09:05.209"/>
+<status status="PASS" starttime="20240620 22:09:34.436" endtime="20240620 22:09:38.601"/>
 </kw>
-<kw name="Click" library="Browser">
-<arg>xpath=//button[text()="Login"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20240605 19:09:05.209" endtime="20240605 19:09:05.571"/>
-</kw>
-<kw name="Get Cookies" library="Browser">
-<var>@{cookies}</var>
+<kw name="Get Text" library="Browser">
+<var>${actual_text}</var>
+<arg>//div[@class='page-title']/h1</arg>
+<arg>==</arg>
+<arg>${expected_text}</arg>
+<tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<doc>Returns cookies from the current active browser context.</doc>
-<msg timestamp="20240605 19:09:05.583" level="INFO">Found cookies: _ga,_gid,_gat_gtag_UA_1248015_24,gdpr-auditId,geo-location</msg>
-<msg timestamp="20240605 19:09:05.589" level="INFO">@{cookies} = [ {'name': '_ga', 'value': 'GA1.2.1584207958.1717607344', 'domain': '.guru99.com', 'path': '/', 'expires': datetime.datetime(2025, 7, 10, 17, 9, 4, 345518, tzinfo=datetime.timezone.utc), 'httpOnly': F...</msg>
-<status status="PASS" starttime="20240605 19:09:05.571" endtime="20240605 19:09:05.590"/>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240620 22:09:38.656" level="INFO">Text: 'Register'</msg>
+<msg timestamp="20240620 22:09:38.656" level="INFO">${actual_text} = Register</msg>
+<status status="PASS" starttime="20240620 22:09:38.601" endtime="20240620 22:09:38.656"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${cookies}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240605 19:09:05.591" level="INFO">[{'name': '_ga', 'value': 'GA1.2.1584207958.1717607344', 'domain': '.guru99.com', 'path': '/', 'expires': datetime.datetime(2025, 7, 10, 17, 9, 4, 345518, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}, {'name': '_gid', 'value': 'GA1.2.802606375.1717607344', 'domain': '.guru99.com', 'path': '/', 'expires': datetime.datetime(2024, 6, 6, 17, 9, 4, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}, {'name': '_gat_gtag_UA_1248015_24', 'value': '1', 'domain': '.guru99.com', 'path': '/', 'expires': datetime.datetime(2024, 6, 5, 17, 10, 4, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}, {'name': 'gdpr-auditId', 'value': '57a03d9c6e2544dab66442296db3b4cc', 'domain': 'demo.guru99.com', 'path': '/', 'expires': datetime.datetime(2025, 6, 30, 17, 9, 4, 886982, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}, {'name': 'geo-location', 'value': '{"country":"PL","region":"12"}', 'domain': 'demo.guru99.com', 'path': '/', 'expires': datetime.datetime(2024, 6, 6, 17, 9, 5, 169154, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}]</msg>
-<status status="PASS" starttime="20240605 19:09:05.590" endtime="20240605 19:09:05.591"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${number_of_cookies}</var>
-<arg>${cookies}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20240605 19:09:05.592" level="INFO">Length is 5</msg>
-<msg timestamp="20240605 19:09:05.592" level="INFO">${number_of_cookies} = 5</msg>
-<status status="PASS" starttime="20240605 19:09:05.592" endtime="20240605 19:09:05.592"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${number_of_cookies}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240605 19:09:05.593" level="INFO">5</msg>
-<status status="PASS" starttime="20240605 19:09:05.593" endtime="20240605 19:09:05.593"/>
-</kw>
-<kw name="Get Cookie" library="Browser">
-<var>${name}</var>
-<arg>gdpr-auditId</arg>
-<tag>BrowserControl</tag>
-<tag>Getter</tag>
-<doc>Returns information of cookie with ``name`` as a Robot Framework dot dictionary or a string.</doc>
-<msg timestamp="20240605 19:09:05.601" level="INFO">${name} = {'name': 'gdpr-auditId', 'value': '57a03d9c6e2544dab66442296db3b4cc', 'domain': 'demo.guru99.com', 'path': '/', 'expires': datetime.datetime(2025, 6, 30, 17, 9, 4, 886982, tzinfo=datetime.timezone.utc...</msg>
-<status status="PASS" starttime="20240605 19:09:05.593" endtime="20240605 19:09:05.601"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${name.value}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240605 19:09:05.606" level="INFO">57a03d9c6e2544dab66442296db3b4cc</msg>
-<status status="PASS" starttime="20240605 19:09:05.602" endtime="20240605 19:09:05.608"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${name.domain}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240605 19:09:05.613" level="INFO">demo.guru99.com</msg>
-<status status="PASS" starttime="20240605 19:09:05.609" endtime="20240605 19:09:05.614"/>
-</kw>
-<kw name="Add Cookie" library="Browser">
-<arg>name=sim</arg>
-<arg>value=seniorqa</arg>
-<arg>domain=demo.guru99.com</arg>
-<arg>path=/sim</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Adds a cookie to currently active browser context.</doc>
-<msg timestamp="20240605 19:09:05.625" level="INFO">Cookie "sim" added.</msg>
-<status status="PASS" starttime="20240605 19:09:05.614" endtime="20240605 19:09:05.625"/>
-</kw>
-<kw name="Get Cookie" library="Browser">
-<var>${name}</var>
-<arg>sim</arg>
-<tag>BrowserControl</tag>
-<tag>Getter</tag>
-<doc>Returns information of cookie with ``name`` as a Robot Framework dot dictionary or a string.</doc>
-<msg timestamp="20240605 19:09:05.640" level="INFO">${name} = {'name': 'sim', 'value': 'seniorqa', 'domain': 'demo.guru99.com', 'path': '/sim', 'expires': datetime.datetime(1969, 12, 31, 23, 59, 59, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': Fal...</msg>
-<status status="PASS" starttime="20240605 19:09:05.626" endtime="20240605 19:09:05.641"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${name.value}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240605 19:09:05.645" level="INFO">seniorqa</msg>
-<status status="PASS" starttime="20240605 19:09:05.642" endtime="20240605 19:09:05.645"/>
-</kw>
-<kw name="Get Cookies" library="Browser">
-<var>@{new_cookies}</var>
+<kw name="Get Title" library="Browser">
+<var>${actual_title}</var>
+<arg>==</arg>
+<arg>${expected_title}</arg>
+<tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<doc>Returns cookies from the current active browser context.</doc>
-<msg timestamp="20240605 19:09:05.656" level="INFO">Found cookies: sim,_ga,_gid,_gat_gtag_UA_1248015_24,gdpr-auditId,geo-location</msg>
-<msg timestamp="20240605 19:09:05.656" level="INFO">@{new_cookies} = [ {'name': 'sim', 'value': 'seniorqa', 'domain': 'demo.guru99.com', 'path': '/sim', 'expires': datetime.datetime(1969, 12, 31, 23, 59, 59, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': F...</msg>
-<status status="PASS" starttime="20240605 19:09:05.646" endtime="20240605 19:09:05.656"/>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240620 22:09:38.671" level="INFO">Title: 'nopCommerce demo store. Register'</msg>
+<msg timestamp="20240620 22:09:38.671" level="INFO">${actual_title} = nopCommerce demo store. Register</msg>
+<status status="PASS" starttime="20240620 22:09:38.656" endtime="20240620 22:09:38.671"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${new_cookies}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240605 19:09:05.657" level="INFO">[{'name': 'sim', 'value': 'seniorqa', 'domain': 'demo.guru99.com', 'path': '/sim', 'expires': datetime.datetime(1969, 12, 31, 23, 59, 59, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}, {'name': '_ga', 'value': 'GA1.2.1584207958.1717607344', 'domain': '.guru99.com', 'path': '/', 'expires': datetime.datetime(2025, 7, 10, 17, 9, 4, 345518, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}, {'name': '_gid', 'value': 'GA1.2.802606375.1717607344', 'domain': '.guru99.com', 'path': '/', 'expires': datetime.datetime(2024, 6, 6, 17, 9, 4, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}, {'name': '_gat_gtag_UA_1248015_24', 'value': '1', 'domain': '.guru99.com', 'path': '/', 'expires': datetime.datetime(2024, 6, 5, 17, 10, 4, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}, {'name': 'gdpr-auditId', 'value': '57a03d9c6e2544dab66442296db3b4cc', 'domain': 'demo.guru99.com', 'path': '/', 'expires': datetime.datetime(2025, 6, 30, 17, 9, 4, 886982, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}, {'name': 'geo-location', 'value': '{"country":"PL","region":"12"}', 'domain': 'demo.guru99.com', 'path': '/', 'expires': datetime.datetime(2024, 6, 6, 17, 9, 5, 169154, tzinfo=datetime.timezone.utc), 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}]</msg>
-<status status="PASS" starttime="20240605 19:09:05.657" endtime="20240605 19:09:05.657"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${new_size}</var>
-<arg>${new_cookies}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20240605 19:09:05.658" level="INFO">Length is 6</msg>
-<msg timestamp="20240605 19:09:05.658" level="INFO">${new_size} = 6</msg>
-<status status="PASS" starttime="20240605 19:09:05.657" endtime="20240605 19:09:05.658"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${new_size}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240605 19:09:05.658" level="INFO">6</msg>
-<status status="PASS" starttime="20240605 19:09:05.658" endtime="20240605 19:09:05.659"/>
-</kw>
-<kw name="Delete All Cookies" library="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Deletes all cookies from the currently active browser context.</doc>
-<msg timestamp="20240605 19:09:05.662" level="INFO">All cookies deleted.</msg>
-<status status="PASS" starttime="20240605 19:09:05.659" endtime="20240605 19:09:05.663"/>
-</kw>
-<kw name="Get Cookies" library="Browser">
-<var>@{cookie_after_deletion}</var>
+<kw name="Get Url" library="Browser">
+<var>${actual_url}</var>
+<arg>==</arg>
+<arg>${expected_url}</arg>
+<tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<doc>Returns cookies from the current active browser context.</doc>
-<msg timestamp="20240605 19:09:05.672" level="INFO">No cookies found.</msg>
-<msg timestamp="20240605 19:09:05.675" level="INFO">@{cookie_after_deletion} = [ ]</msg>
-<status status="PASS" starttime="20240605 19:09:05.663" endtime="20240605 19:09:05.676"/>
+<doc>Returns the current URL.</doc>
+<msg timestamp="20240620 22:09:38.674" level="INFO">${actual_url} = https://demo.nopcommerce.com/register</msg>
+<status status="PASS" starttime="20240620 22:09:38.671" endtime="20240620 22:09:38.674"/>
 </kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${deleted_size}</var>
-<arg>${cookie_after_deletion}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20240605 19:09:05.677" level="INFO">Length is 0</msg>
-<msg timestamp="20240605 19:09:05.677" level="INFO">${deleted_size} = 0</msg>
-<status status="PASS" starttime="20240605 19:09:05.676" endtime="20240605 19:09:05.677"/>
+<kw name="Get Element Count" library="Browser">
+<var>${actual_element_count}</var>
+<arg>//a</arg>
+<arg>&gt;</arg>
+<arg>60</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20240620 22:09:38.683" level="INFO">${actual_element_count} = 61</msg>
+<status status="PASS" starttime="20240620 22:09:38.674" endtime="20240620 22:09:38.683"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>${deleted_size}</arg>
+<arg>${actual_element_count}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240605 19:09:05.678" level="INFO">0</msg>
-<status status="PASS" starttime="20240605 19:09:05.677" endtime="20240605 19:09:05.678"/>
+<msg timestamp="20240620 22:09:38.683" level="INFO">61</msg>
+<status status="PASS" starttime="20240620 22:09:38.683" endtime="20240620 22:09:38.683"/>
 </kw>
-<status status="PASS" starttime="20240605 19:09:00.333" endtime="20240605 19:09:05.678"/>
+<kw name="Scroll To Element" library="Browser">
+<arg>//input[@id='Newsletter']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" starttime="20240620 22:09:38.683" endtime="20240620 22:09:38.705"/>
+</kw>
+<kw name="Get Element States" library="Browser">
+<arg>//input[@id='Newsletter']</arg>
+<arg>contains</arg>
+<arg>checked</arg>
+<arg>visible</arg>
+<arg>enabled</arg>
+<arg>editable</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<msg timestamp="20240620 22:09:38.740" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'defocused', 'checked']</msg>
+<status status="PASS" starttime="20240620 22:09:38.712" endtime="20240620 22:09:38.740"/>
+</kw>
+<kw name="Get Checkbox State" library="Browser">
+<arg>//input[@id='Newsletter']</arg>
+<arg>==</arg>
+<arg>checked</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the state of the checkbox found by ``selector``.</doc>
+<msg timestamp="20240620 22:09:38.744" level="INFO">Retrieved dom property for element //input[@id='Newsletter'] containing true</msg>
+<msg timestamp="20240620 22:09:38.744" level="INFO">Checkbox is checked</msg>
+<status status="PASS" starttime="20240620 22:09:38.740" endtime="20240620 22:09:38.744"/>
+</kw>
+<status status="PASS" starttime="20240620 22:09:34.420" endtime="20240620 22:09:38.744"/>
 </test>
-<status status="PASS" starttime="20240605 19:08:54.663" endtime="20240605 19:09:05.969"/>
+<status status="PASS" starttime="20240620 22:09:33.091" endtime="20240620 22:09:38.854"/>
 </suite>
 <statistics>
 <total>
@@ -223,7 +160,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="CookiesTest">CookiesTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Assertions">Assertions</stat>
 </suite>
 </statistics>
 <errors>
