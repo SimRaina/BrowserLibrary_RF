@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20240620 22:09:33.089" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20240629 16:55:21.554" rpa="false" schemaversion="4">
 <suite id="s1" name="Assertions" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\Assertions.robot">
-<test id="s1-t1" name="AssertionTest" line="11">
+<test id="s1-t1" name="AssertionTest" line="14">
 <kw name="Open Browser to Register Page" library="Resource" type="SETUP">
 <kw name="Open Maximized Browser" library="Resource">
 <arg>Chromium</arg>
@@ -12,16 +12,16 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20240620 22:09:34.436" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\8d09665f-5899-417d-958c-eb92ab9849a8"}</msg>
-<msg timestamp="20240620 22:09:35.216" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\8d09665f-5899-417d-958c-eb92ab9849a8"}</msg>
-<status status="PASS" starttime="20240620 22:09:34.436" endtime="20240620 22:09:35.216"/>
+<msg timestamp="20240629 16:55:24.741" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\21f833d4-1f1c-4f5c-a551-9e11dbb28b97"}</msg>
+<msg timestamp="20240629 16:55:25.926" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\21f833d4-1f1c-4f5c-a551-9e11dbb28b97"}</msg>
+<status status="PASS" starttime="20240629 16:55:24.741" endtime="20240629 16:55:25.926"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>viewport=${None}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20240620 22:09:35.216" level="INFO">{
+<msg timestamp="20240629 16:55:25.926" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -32,11 +32,11 @@
   "reducedMotion": "no-preference",
   "viewport": null
 }</msg>
-<msg timestamp="20240620 22:09:35.232" level="INFO">Successfully created context. </msg>
-<msg timestamp="20240620 22:09:35.232" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<status status="PASS" starttime="20240620 22:09:35.216" endtime="20240620 22:09:35.232"/>
+<msg timestamp="20240629 16:55:25.958" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240629 16:55:25.961" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<status status="PASS" starttime="20240629 16:55:25.926" endtime="20240629 16:55:25.961"/>
 </kw>
-<status status="PASS" starttime="20240620 22:09:34.436" endtime="20240620 22:09:35.232"/>
+<status status="PASS" starttime="20240629 16:55:24.741" endtime="20240629 16:55:25.962"/>
 </kw>
 <kw name="Go to Site" library="Resource">
 <arg>https://demo.nopcommerce.com/register</arg>
@@ -45,24 +45,23 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20240620 22:09:36.600" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/register</msg>
-<status status="PASS" starttime="20240620 22:09:35.232" endtime="20240620 22:09:36.600"/>
+<msg timestamp="20240629 16:55:27.883" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/register</msg>
+<status status="PASS" starttime="20240629 16:55:25.962" endtime="20240629 16:55:27.883"/>
 </kw>
-<status status="PASS" starttime="20240620 22:09:35.232" endtime="20240620 22:09:36.600"/>
+<status status="PASS" starttime="20240629 16:55:25.962" endtime="20240629 16:55:27.883"/>
 </kw>
 <kw name="Wait Sleep" library="Resource">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240620 22:09:38.601" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240620 22:09:36.600" endtime="20240620 22:09:38.601"/>
+<msg timestamp="20240629 16:55:29.892" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240629 16:55:27.891" endtime="20240629 16:55:29.892"/>
 </kw>
-<status status="PASS" starttime="20240620 22:09:36.600" endtime="20240620 22:09:38.601"/>
+<status status="PASS" starttime="20240629 16:55:27.891" endtime="20240629 16:55:29.892"/>
 </kw>
-<status status="PASS" starttime="20240620 22:09:34.436" endtime="20240620 22:09:38.601"/>
+<status status="PASS" starttime="20240629 16:55:24.741" endtime="20240629 16:55:29.892"/>
 </kw>
 <kw name="Get Text" library="Browser">
-<var>${actual_text}</var>
 <arg>//div[@class='page-title']/h1</arg>
 <arg>==</arg>
 <arg>${expected_text}</arg>
@@ -70,35 +69,29 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20240620 22:09:38.656" level="INFO">Text: 'Register'</msg>
-<msg timestamp="20240620 22:09:38.656" level="INFO">${actual_text} = Register</msg>
-<status status="PASS" starttime="20240620 22:09:38.601" endtime="20240620 22:09:38.656"/>
+<msg timestamp="20240629 16:55:29.956" level="INFO">Text: 'Register'</msg>
+<status status="PASS" starttime="20240629 16:55:29.892" endtime="20240629 16:55:29.961"/>
 </kw>
 <kw name="Get Title" library="Browser">
-<var>${actual_title}</var>
 <arg>==</arg>
 <arg>${expected_title}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20240620 22:09:38.671" level="INFO">Title: 'nopCommerce demo store. Register'</msg>
-<msg timestamp="20240620 22:09:38.671" level="INFO">${actual_title} = nopCommerce demo store. Register</msg>
-<status status="PASS" starttime="20240620 22:09:38.656" endtime="20240620 22:09:38.671"/>
+<msg timestamp="20240629 16:55:29.961" level="INFO">Title: 'nopCommerce demo store. Register'</msg>
+<status status="PASS" starttime="20240629 16:55:29.961" endtime="20240629 16:55:29.961"/>
 </kw>
 <kw name="Get Url" library="Browser">
-<var>${actual_url}</var>
 <arg>==</arg>
 <arg>${expected_url}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<msg timestamp="20240620 22:09:38.674" level="INFO">${actual_url} = https://demo.nopcommerce.com/register</msg>
-<status status="PASS" starttime="20240620 22:09:38.671" endtime="20240620 22:09:38.674"/>
+<status status="PASS" starttime="20240629 16:55:29.961" endtime="20240629 16:55:29.961"/>
 </kw>
 <kw name="Get Element Count" library="Browser">
-<var>${actual_element_count}</var>
 <arg>//a</arg>
 <arg>&gt;</arg>
 <arg>60</arg>
@@ -106,27 +99,12 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<msg timestamp="20240620 22:09:38.683" level="INFO">${actual_element_count} = 61</msg>
-<status status="PASS" starttime="20240620 22:09:38.674" endtime="20240620 22:09:38.683"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${actual_element_count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240620 22:09:38.683" level="INFO">61</msg>
-<status status="PASS" starttime="20240620 22:09:38.683" endtime="20240620 22:09:38.683"/>
-</kw>
-<kw name="Scroll To Element" library="Browser">
-<arg>//input[@id='Newsletter']</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>This method waits for actionability checks, then tries to scroll element into view,
-unless it is completely visible.</doc>
-<status status="PASS" starttime="20240620 22:09:38.683" endtime="20240620 22:09:38.705"/>
+<status status="PASS" starttime="20240629 16:55:29.961" endtime="20240629 16:55:29.972"/>
 </kw>
 <kw name="Get Element States" library="Browser">
-<arg>//input[@id='Newsletter']</arg>
+<arg>//input[@id='gender-male']</arg>
 <arg>contains</arg>
-<arg>checked</arg>
+<arg>unchecked</arg>
 <arg>visible</arg>
 <arg>enabled</arg>
 <arg>editable</arg>
@@ -134,8 +112,16 @@ unless it is completely visible.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20240620 22:09:38.740" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'defocused', 'checked']</msg>
-<status status="PASS" starttime="20240620 22:09:38.712" endtime="20240620 22:09:38.740"/>
+<msg timestamp="20240629 16:55:30.004" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'defocused', 'unchecked']</msg>
+<status status="PASS" starttime="20240629 16:55:29.972" endtime="20240629 16:55:30.004"/>
+</kw>
+<kw name="Scroll To Element" library="Browser">
+<arg>//input[@id='Newsletter']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" starttime="20240629 16:55:30.004" endtime="20240629 16:55:30.044"/>
 </kw>
 <kw name="Get Checkbox State" library="Browser">
 <arg>//input[@id='Newsletter']</arg>
@@ -145,13 +131,70 @@ unless it is completely visible.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the state of the checkbox found by ``selector``.</doc>
-<msg timestamp="20240620 22:09:38.744" level="INFO">Retrieved dom property for element //input[@id='Newsletter'] containing true</msg>
-<msg timestamp="20240620 22:09:38.744" level="INFO">Checkbox is checked</msg>
-<status status="PASS" starttime="20240620 22:09:38.740" endtime="20240620 22:09:38.744"/>
+<msg timestamp="20240629 16:55:30.062" level="INFO">Retrieved dom property for element //input[@id='Newsletter'] containing true</msg>
+<msg timestamp="20240629 16:55:30.062" level="INFO">Checkbox is checked</msg>
+<status status="PASS" starttime="20240629 16:55:30.044" endtime="20240629 16:55:30.062"/>
 </kw>
-<status status="PASS" starttime="20240620 22:09:34.420" endtime="20240620 22:09:38.744"/>
+<kw name="Scroll To Element" library="Browser">
+<arg>//div[1]/div[2]/div[2]/input</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" starttime="20240629 16:55:30.062" endtime="20240629 16:55:30.092"/>
+</kw>
+<kw name="Get Attribute" library="Browser">
+<arg>//div[1]/div[2]/div[2]/input</arg>
+<arg>name</arg>
+<arg>==</arg>
+<arg>${expected_attrvalue}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<msg timestamp="20240629 16:55:30.111" level="INFO">Attribute is: 'FirstName'</msg>
+<status status="PASS" starttime="20240629 16:55:30.092" endtime="20240629 16:55:30.111"/>
+</kw>
+<kw name="Get Attribute Names" library="Browser">
+<arg>//div[1]/div[2]/div[2]/input</arg>
+<arg>contains</arg>
+<arg>id</arg>
+<arg>name</arg>
+<arg>type</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns all HTML attribute names of an element as a list.</doc>
+<msg timestamp="20240629 16:55:30.133" level="INFO">JavaScript executed successfully.</msg>
+<status status="PASS" starttime="20240629 16:55:30.111" endtime="20240629 16:55:30.133"/>
+</kw>
+<kw name="Get BoundingBox" library="Browser">
+<arg>//div[1]/div[2]/div[2]/input</arg>
+<arg>width</arg>
+<arg>==</arg>
+<arg>400</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Gets elements size and location as an object ``{x: float, y: float, width: float, height: float}``.</doc>
+<msg timestamp="20240629 16:55:30.150" level="INFO">Value of 'BoundingBoxFields.width'': 400</msg>
+<status status="PASS" starttime="20240629 16:55:30.133" endtime="20240629 16:55:30.150"/>
+</kw>
+<kw name="Get Property" library="Browser">
+<arg>//form/div[1]/div[1]/strong</arg>
+<arg>innerText</arg>
+<arg>==</arg>
+<arg>${expected_inner_text}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the ``property`` of the element found by ``selector``.</doc>
+<msg timestamp="20240629 16:55:30.166" level="INFO">Property: 'Your Personal Details'</msg>
+<status status="PASS" starttime="20240629 16:55:30.150" endtime="20240629 16:55:30.166"/>
+</kw>
+<status status="PASS" starttime="20240629 16:55:24.741" endtime="20240629 16:55:30.166"/>
 </test>
-<status status="PASS" starttime="20240620 22:09:33.091" endtime="20240620 22:09:38.854"/>
+<status status="PASS" starttime="20240629 16:55:21.554" endtime="20240629 16:55:30.295"/>
 </suite>
 <statistics>
 <total>
