@@ -1,200 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20240629 16:55:21.554" rpa="false" schemaversion="4">
-<suite id="s1" name="Assertions" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\Assertions.robot">
-<test id="s1-t1" name="AssertionTest" line="14">
-<kw name="Open Browser to Register Page" library="Resource" type="SETUP">
-<kw name="Open Maximized Browser" library="Resource">
-<arg>Chromium</arg>
-<kw name="New Browser" library="Browser">
-<arg>browser=${browser}</arg>
-<arg>headless=false</arg>
-<arg>args=["--start-maximized"]</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20240629 16:55:24.741" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\21f833d4-1f1c-4f5c-a551-9e11dbb28b97"}</msg>
-<msg timestamp="20240629 16:55:25.926" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\21f833d4-1f1c-4f5c-a551-9e11dbb28b97"}</msg>
-<status status="PASS" starttime="20240629 16:55:24.741" endtime="20240629 16:55:25.926"/>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20240713 14:01:51.382" rpa="false" schemaversion="4">
+<suite id="s1" name="JSONData" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\JSONData.robot">
+<test id="s1-t1" name="AddUpdateJsonObject" line="42">
+<kw name="Load Json From File" library="JSONLibrary">
+<var>${json_data}</var>
+<arg>C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\BrowserTest${/}\\Data\\${TESTDATA}</arg>
+<doc>Load JSON from file.</doc>
+<msg timestamp="20240713 14:01:53.346" level="INFO">${json_data} = {'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Sim', 'lastname': 'Raina'}}</msg>
+<status status="PASS" starttime="20240713 14:01:53.344" endtime="20240713 14:01:53.348"/>
 </kw>
-<kw name="New Context" library="Browser">
-<arg>viewport=${None}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20240629 16:55:25.926" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": "",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": null
-}</msg>
-<msg timestamp="20240629 16:55:25.958" level="INFO">Successfully created context. </msg>
-<msg timestamp="20240629 16:55:25.961" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<status status="PASS" starttime="20240629 16:55:25.926" endtime="20240629 16:55:25.961"/>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${dict}</var>
+<arg>channelName=seniorqa</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240713 14:01:53.349" level="INFO">${dict} = {'channelName': 'seniorqa'}</msg>
+<status status="PASS" starttime="20240713 14:01:53.348" endtime="20240713 14:01:53.349"/>
 </kw>
-<status status="PASS" starttime="20240629 16:55:24.741" endtime="20240629 16:55:25.962"/>
+<kw name="Add Object To Json" library="JSONLibrary">
+<var>${json}</var>
+<arg>${json_data}</arg>
+<arg>details</arg>
+<arg>${dict}</arg>
+<doc>Add an dictionary or list object to json object using json_path</doc>
+<msg timestamp="20240713 14:01:53.374" level="INFO">${json} = {'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Sim', 'lastname': 'Raina', 'channelName': 'seniorqa...</msg>
+<status status="PASS" starttime="20240713 14:01:53.349" endtime="20240713 14:01:53.374"/>
 </kw>
-<kw name="Go to Site" library="Resource">
-<arg>https://demo.nopcommerce.com/register</arg>
-<kw name="New Page" library="Browser">
-<arg>${url}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<msg timestamp="20240629 16:55:27.883" level="INFO">Successfully initialized new page object and opened url: https://demo.nopcommerce.com/register</msg>
-<status status="PASS" starttime="20240629 16:55:25.962" endtime="20240629 16:55:27.883"/>
+<kw name="Log" library="BuiltIn">
+<arg>${json}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240713 14:01:53.375" level="INFO">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Sim', 'lastname': 'Raina', 'channelName': 'seniorqa'}}</msg>
+<status status="PASS" starttime="20240713 14:01:53.375" endtime="20240713 14:01:53.375"/>
 </kw>
-<status status="PASS" starttime="20240629 16:55:25.962" endtime="20240629 16:55:27.883"/>
+<kw name="Should Have Value In Json" library="JSONLibrary">
+<arg>${json}</arg>
+<arg>details.channelName</arg>
+<doc>Should Have Value In JSON using JSONPath</doc>
+<status status="PASS" starttime="20240713 14:01:53.375" endtime="20240713 14:01:53.391"/>
 </kw>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240629 16:55:29.892" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240629 16:55:27.891" endtime="20240629 16:55:29.892"/>
+<kw name="Update Value To Json" library="JSONLibrary">
+<var>${new_json_data}</var>
+<arg>${json}</arg>
+<arg>details.firstname</arg>
+<arg>Simran</arg>
+<doc>Update value to JSON using JSONPath</doc>
+<msg timestamp="20240713 14:01:53.408" level="INFO">${new_json_data} = {'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Simran', 'lastname': 'Raina', 'channelName': 'senio...</msg>
+<status status="PASS" starttime="20240713 14:01:53.392" endtime="20240713 14:01:53.408"/>
 </kw>
-<status status="PASS" starttime="20240629 16:55:27.891" endtime="20240629 16:55:29.892"/>
+<kw name="Log" library="BuiltIn">
+<arg>${new_json_data}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240713 14:01:53.409" level="INFO">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Simran', 'lastname': 'Raina', 'channelName': 'seniorqa'}}</msg>
+<status status="PASS" starttime="20240713 14:01:53.408" endtime="20240713 14:01:53.409"/>
 </kw>
-<status status="PASS" starttime="20240629 16:55:24.741" endtime="20240629 16:55:29.892"/>
+<kw name="Delete Object From Json" library="JSONLibrary">
+<var>${updated_json}</var>
+<arg>${new_json_data}</arg>
+<arg>details.channelName</arg>
+<doc>Delete Object From JSON using json_path</doc>
+<msg timestamp="20240713 14:01:53.427" level="INFO">${updated_json} = {'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Simran', 'lastname': 'Raina'}}</msg>
+<status status="PASS" starttime="20240713 14:01:53.409" endtime="20240713 14:01:53.427"/>
 </kw>
-<kw name="Get Text" library="Browser">
-<arg>//div[@class='page-title']/h1</arg>
-<arg>==</arg>
-<arg>${expected_text}</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20240629 16:55:29.956" level="INFO">Text: 'Register'</msg>
-<status status="PASS" starttime="20240629 16:55:29.892" endtime="20240629 16:55:29.961"/>
+<kw name="Log" library="BuiltIn">
+<arg>${updated_json}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240713 14:01:53.428" level="INFO">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Simran', 'lastname': 'Raina'}}</msg>
+<status status="PASS" starttime="20240713 14:01:53.428" endtime="20240713 14:01:53.428"/>
 </kw>
-<kw name="Get Title" library="Browser">
-<arg>==</arg>
-<arg>${expected_title}</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20240629 16:55:29.961" level="INFO">Title: 'nopCommerce demo store. Register'</msg>
-<status status="PASS" starttime="20240629 16:55:29.961" endtime="20240629 16:55:29.961"/>
+<kw name="Should Not Have Value In Json" library="JSONLibrary">
+<arg>${updated_json}</arg>
+<arg>details.channelName</arg>
+<doc>Should Not Have Value In JSON using JSONPath</doc>
+<status status="PASS" starttime="20240713 14:01:53.428" endtime="20240713 14:01:53.443"/>
 </kw>
-<kw name="Get Url" library="Browser">
-<arg>==</arg>
-<arg>${expected_url}</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the current URL.</doc>
-<status status="PASS" starttime="20240629 16:55:29.961" endtime="20240629 16:55:29.961"/>
-</kw>
-<kw name="Get Element Count" library="Browser">
-<arg>//a</arg>
-<arg>&gt;</arg>
-<arg>60</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" starttime="20240629 16:55:29.961" endtime="20240629 16:55:29.972"/>
-</kw>
-<kw name="Get Element States" library="Browser">
-<arg>//input[@id='gender-male']</arg>
-<arg>contains</arg>
-<arg>unchecked</arg>
-<arg>visible</arg>
-<arg>enabled</arg>
-<arg>editable</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20240629 16:55:30.004" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'defocused', 'unchecked']</msg>
-<status status="PASS" starttime="20240629 16:55:29.972" endtime="20240629 16:55:30.004"/>
-</kw>
-<kw name="Scroll To Element" library="Browser">
-<arg>//input[@id='Newsletter']</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>This method waits for actionability checks, then tries to scroll element into view,
-unless it is completely visible.</doc>
-<status status="PASS" starttime="20240629 16:55:30.004" endtime="20240629 16:55:30.044"/>
-</kw>
-<kw name="Get Checkbox State" library="Browser">
-<arg>//input[@id='Newsletter']</arg>
-<arg>==</arg>
-<arg>checked</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the state of the checkbox found by ``selector``.</doc>
-<msg timestamp="20240629 16:55:30.062" level="INFO">Retrieved dom property for element //input[@id='Newsletter'] containing true</msg>
-<msg timestamp="20240629 16:55:30.062" level="INFO">Checkbox is checked</msg>
-<status status="PASS" starttime="20240629 16:55:30.044" endtime="20240629 16:55:30.062"/>
-</kw>
-<kw name="Scroll To Element" library="Browser">
-<arg>//div[1]/div[2]/div[2]/input</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>This method waits for actionability checks, then tries to scroll element into view,
-unless it is completely visible.</doc>
-<status status="PASS" starttime="20240629 16:55:30.062" endtime="20240629 16:55:30.092"/>
-</kw>
-<kw name="Get Attribute" library="Browser">
-<arg>//div[1]/div[2]/div[2]/input</arg>
-<arg>name</arg>
-<arg>==</arg>
-<arg>${expected_attrvalue}</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<msg timestamp="20240629 16:55:30.111" level="INFO">Attribute is: 'FirstName'</msg>
-<status status="PASS" starttime="20240629 16:55:30.092" endtime="20240629 16:55:30.111"/>
-</kw>
-<kw name="Get Attribute Names" library="Browser">
-<arg>//div[1]/div[2]/div[2]/input</arg>
-<arg>contains</arg>
-<arg>id</arg>
-<arg>name</arg>
-<arg>type</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns all HTML attribute names of an element as a list.</doc>
-<msg timestamp="20240629 16:55:30.133" level="INFO">JavaScript executed successfully.</msg>
-<status status="PASS" starttime="20240629 16:55:30.111" endtime="20240629 16:55:30.133"/>
-</kw>
-<kw name="Get BoundingBox" library="Browser">
-<arg>//div[1]/div[2]/div[2]/input</arg>
-<arg>width</arg>
-<arg>==</arg>
-<arg>400</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Gets elements size and location as an object ``{x: float, y: float, width: float, height: float}``.</doc>
-<msg timestamp="20240629 16:55:30.150" level="INFO">Value of 'BoundingBoxFields.width'': 400</msg>
-<status status="PASS" starttime="20240629 16:55:30.133" endtime="20240629 16:55:30.150"/>
-</kw>
-<kw name="Get Property" library="Browser">
-<arg>//form/div[1]/div[1]/strong</arg>
-<arg>innerText</arg>
-<arg>==</arg>
-<arg>${expected_inner_text}</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the ``property`` of the element found by ``selector``.</doc>
-<msg timestamp="20240629 16:55:30.166" level="INFO">Property: 'Your Personal Details'</msg>
-<status status="PASS" starttime="20240629 16:55:30.150" endtime="20240629 16:55:30.166"/>
-</kw>
-<status status="PASS" starttime="20240629 16:55:24.741" endtime="20240629 16:55:30.166"/>
+<status status="PASS" starttime="20240713 14:01:53.339" endtime="20240713 14:01:53.444"/>
 </test>
-<status status="PASS" starttime="20240629 16:55:21.554" endtime="20240629 16:55:30.295"/>
+<status status="PASS" starttime="20240713 14:01:51.386" endtime="20240713 14:01:53.455"/>
 </suite>
 <statistics>
 <total>
@@ -203,7 +83,7 @@ unless it is completely visible.</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Assertions">Assertions</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="JSONData">JSONData</stat>
 </suite>
 </statistics>
 <errors>

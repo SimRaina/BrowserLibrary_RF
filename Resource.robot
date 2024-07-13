@@ -34,6 +34,12 @@ Open Browser to Dashboard Page
     Valid OrangeHRM Login
     Wait Sleep
 
+Open Browser to OrangeHRM Page
+    Open Maximized Browser        Chromium
+    Go to Site                    https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+    Wait Sleep
+
+
 Open Browser to Table Page
     Open Maximized Browser    Chromium
     Go to Site                https://tablepress.org/demo/
