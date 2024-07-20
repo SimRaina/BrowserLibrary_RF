@@ -1,89 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20240713 14:01:51.382" rpa="false" schemaversion="4">
-<suite id="s1" name="JSONData" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\JSONData.robot">
-<test id="s1-t1" name="AddUpdateJsonObject" line="42">
-<kw name="Load Json From File" library="JSONLibrary">
-<var>${json_data}</var>
-<arg>C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\BrowserTest${/}\\Data\\${TESTDATA}</arg>
-<doc>Load JSON from file.</doc>
-<msg timestamp="20240713 14:01:53.346" level="INFO">${json_data} = {'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Sim', 'lastname': 'Raina'}}</msg>
-<status status="PASS" starttime="20240713 14:01:53.344" endtime="20240713 14:01:53.348"/>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20240715 19:44:59.332" rpa="false" schemaversion="4">
+<suite id="s1" name="ExcelDataReadWrite RPA" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\ExcelDataReadWrite_RPA.robot">
+<test id="s1-t1" name="ReadSheetAsTable" line="57">
+<kw name="Open Browser to OrangeHRM Page" library="Resource" type="SETUP">
+<kw name="Open Maximized Browser" library="Resource">
+<arg>Chromium</arg>
+<kw name="New Browser" library="Browser">
+<arg>browser=${browser}</arg>
+<arg>headless=false</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20240715 19:45:00.631" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\0185ce95-0a54-431d-a13a-77dab2945dc7"}</msg>
+<msg timestamp="20240715 19:45:01.179" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\0185ce95-0a54-431d-a13a-77dab2945dc7"}</msg>
+<status status="PASS" starttime="20240715 19:45:00.631" endtime="20240715 19:45:01.179"/>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${dict}</var>
-<arg>channelName=seniorqa</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20240713 14:01:53.349" level="INFO">${dict} = {'channelName': 'seniorqa'}</msg>
-<status status="PASS" starttime="20240713 14:01:53.348" endtime="20240713 14:01:53.349"/>
+<kw name="New Context" library="Browser">
+<arg>viewport=${None}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20240715 19:45:01.181" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": "",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": null
+}</msg>
+<msg timestamp="20240715 19:45:01.196" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240715 19:45:01.196" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<status status="PASS" starttime="20240715 19:45:01.181" endtime="20240715 19:45:01.196"/>
 </kw>
-<kw name="Add Object To Json" library="JSONLibrary">
-<var>${json}</var>
-<arg>${json_data}</arg>
-<arg>details</arg>
-<arg>${dict}</arg>
-<doc>Add an dictionary or list object to json object using json_path</doc>
-<msg timestamp="20240713 14:01:53.374" level="INFO">${json} = {'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Sim', 'lastname': 'Raina', 'channelName': 'seniorqa...</msg>
-<status status="PASS" starttime="20240713 14:01:53.349" endtime="20240713 14:01:53.374"/>
+<status status="PASS" starttime="20240715 19:45:00.631" endtime="20240715 19:45:01.196"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${json}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240713 14:01:53.375" level="INFO">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Sim', 'lastname': 'Raina', 'channelName': 'seniorqa'}}</msg>
-<status status="PASS" starttime="20240713 14:01:53.375" endtime="20240713 14:01:53.375"/>
+<kw name="Go to Site" library="Resource">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20240715 19:45:08.210" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<status status="PASS" starttime="20240715 19:45:01.196" endtime="20240715 19:45:08.210"/>
 </kw>
-<kw name="Should Have Value In Json" library="JSONLibrary">
-<arg>${json}</arg>
-<arg>details.channelName</arg>
-<doc>Should Have Value In JSON using JSONPath</doc>
-<status status="PASS" starttime="20240713 14:01:53.375" endtime="20240713 14:01:53.391"/>
+<status status="PASS" starttime="20240715 19:45:01.196" endtime="20240715 19:45:08.210"/>
 </kw>
-<kw name="Update Value To Json" library="JSONLibrary">
-<var>${new_json_data}</var>
-<arg>${json}</arg>
-<arg>details.firstname</arg>
-<arg>Simran</arg>
-<doc>Update value to JSON using JSONPath</doc>
-<msg timestamp="20240713 14:01:53.408" level="INFO">${new_json_data} = {'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Simran', 'lastname': 'Raina', 'channelName': 'senio...</msg>
-<status status="PASS" starttime="20240713 14:01:53.392" endtime="20240713 14:01:53.408"/>
+<kw name="Wait Sleep" library="Resource">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240715 19:45:10.210" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240715 19:45:08.210" endtime="20240715 19:45:10.210"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${new_json_data}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240713 14:01:53.409" level="INFO">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Simran', 'lastname': 'Raina', 'channelName': 'seniorqa'}}</msg>
-<status status="PASS" starttime="20240713 14:01:53.408" endtime="20240713 14:01:53.409"/>
+<status status="PASS" starttime="20240715 19:45:08.210" endtime="20240715 19:45:10.210"/>
 </kw>
-<kw name="Delete Object From Json" library="JSONLibrary">
-<var>${updated_json}</var>
-<arg>${new_json_data}</arg>
-<arg>details.channelName</arg>
-<doc>Delete Object From JSON using json_path</doc>
-<msg timestamp="20240713 14:01:53.427" level="INFO">${updated_json} = {'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Simran', 'lastname': 'Raina'}}</msg>
-<status status="PASS" starttime="20240713 14:01:53.409" endtime="20240713 14:01:53.427"/>
+<status status="PASS" starttime="20240715 19:45:00.631" endtime="20240715 19:45:10.210"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${updated_json}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240713 14:01:53.428" level="INFO">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'admin123', 'details': {'firstname': 'Simran', 'lastname': 'Raina'}}</msg>
-<status status="PASS" starttime="20240713 14:01:53.428" endtime="20240713 14:01:53.428"/>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${EXCEL FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20240715 19:45:10.226" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x00000187040BCF90&gt;</msg>
+<status status="PASS" starttime="20240715 19:45:10.210" endtime="20240715 19:45:10.226"/>
 </kw>
-<kw name="Should Not Have Value In Json" library="JSONLibrary">
-<arg>${updated_json}</arg>
-<arg>details.channelName</arg>
-<doc>Should Not Have Value In JSON using JSONPath</doc>
-<status status="PASS" starttime="20240713 14:01:53.428" endtime="20240713 14:01:53.443"/>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${data}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20240715 19:45:10.229" level="INFO">Created table: Table(columns=['Username', 'Password', 'Result'], rows=3)</msg>
+<msg timestamp="20240715 19:45:10.516" level="INFO">&lt;IPython.core.display.Markdown object&gt;
+&lt;IPython.core.display.Markdown object&gt;</msg>
+<msg timestamp="20240715 19:45:10.516" level="INFO">${data} = Table(columns=['Username', 'Password', 'Result'], rows=3)</msg>
+<status status="PASS" starttime="20240715 19:45:10.226" endtime="20240715 19:45:10.516"/>
 </kw>
-<status status="PASS" starttime="20240713 14:01:53.339" endtime="20240713 14:01:53.444"/>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{data}</value>
+<iter>
+<var name="${row}">{'Username': 'admin123', 'Password': 'admin123', 'Result': None}</var>
+<kw name="Try Login">
+<var>${result}</var>
+<arg>${row['Username']}</arg>
+<arg>${row['Password']}</arg>
+<kw name="Fill Text" library="Browser">
+<arg>//form/div[1]/div/div[2]/input</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240715 19:45:10.527" level="INFO">Fills the text 'admin123' in the given field.</msg>
+<status status="PASS" starttime="20240715 19:45:10.527" endtime="20240715 19:45:10.572"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//form/div[2]/div/div[2]/input</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240715 19:45:10.572" level="INFO">Fills the text 'admin123' in the given field.</msg>
+<status status="PASS" starttime="20240715 19:45:10.572" endtime="20240715 19:45:10.599"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//form/div[3]/button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20240715 19:45:10.599" endtime="20240715 19:45:11.346"/>
+</kw>
+<msg timestamp="20240715 19:45:11.346" level="INFO">${result} = LoggedIn</msg>
+<status status="PASS" starttime="20240715 19:45:10.527" endtime="20240715 19:45:11.346"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>${row['Result']}</arg>
+<arg>C</arg>
+<arg>${result}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<msg timestamp="20240715 19:45:11.349" level="FAIL">ValueError: Argument 'row' got value 'None' (None) that cannot be converted to integer.</msg>
+<status status="FAIL" starttime="20240715 19:45:11.347" endtime="20240715 19:45:11.349"/>
+</kw>
+<status status="FAIL" starttime="20240715 19:45:10.527" endtime="20240715 19:45:11.349"/>
+</iter>
+<status status="FAIL" starttime="20240715 19:45:10.527" endtime="20240715 19:45:11.349"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<status status="NOT RUN" starttime="20240715 19:45:11.351" endtime="20240715 19:45:11.351"/>
+</kw>
+<status status="FAIL" starttime="20240715 19:45:00.631" endtime="20240715 19:45:11.351">ValueError: Argument 'row' got value 'None' (None) that cannot be converted to integer.</status>
 </test>
-<status status="PASS" starttime="20240713 14:01:51.386" endtime="20240713 14:01:53.455"/>
+<status status="FAIL" starttime="20240715 19:44:59.332" endtime="20240715 19:45:11.503"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="JSONData">JSONData</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="ExcelDataReadWrite RPA">ExcelDataReadWrite RPA</stat>
 </suite>
 </statistics>
 <errors>

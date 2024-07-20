@@ -1,9 +1,8 @@
 *** Settings ***
 Library    Browser
 Library    RPA.Excel.Files
-# Test Setup    Open Browser to OrangeHRM Page
+Test Setup   Open Browser to OrangeHRM Page
 Resource    ../Resource.robot
-
 
 *** Variables ***
 ${EXCEL_FILE}     ${CURDIR}${/}\\Data\\LoginData.xlsx
@@ -25,7 +24,7 @@ ReadExistingWorkbook
             Log   Worksheet ${sheet} has ${rows} rows
     END
 
-WriteWorkbook
+WriteNewWorkbook
     # creating new excel using dictionary
     Create Workbook  ${NEW_EXCEL}\\new.xlsx
     FOR    ${index}    IN RANGE    10
@@ -35,11 +34,11 @@ WriteWorkbook
     Save Workbook
     Close Workbook
 
-WriteSheet
+WriteNewSheet
      Open Workbook    ${NEW_EXCEL}\\new.xlsx
-     # Create a new blank worksheet named "Customers"
-     Create Worksheet    Student
-     # Create a new worksheet with headers and contents using
+     # Create a new blank worksheet named "Student"
+     Create Worksheet    Employee
+     # Create a new worksheet with headers and contents using list of dictionaries
     &{Student_Row1}=    Create Dictionary      name=Martin   age=${20}
     &{Student_Row2}=    Create Dictionary      name=Ron   age=${22}
     @{Worksheet_Data}=    Create List
@@ -47,7 +46,7 @@ WriteSheet
     ...    ${Student_Row2}
 
     Create Worksheet
-    ...    name=Student
+    ...    name=Employee
     ...    content=${Worksheet_Data}
     ...    exist_ok=True
     ...    header=True
@@ -63,6 +62,16 @@ ReadSheetAsTable
     END
     Close Workbook
 
+ReadData
+     Open Workbook      ${EXCEL FILE}
+     ${sheet}=        Read Worksheet     login      header=False
+     ${rows}=         Get Length        ${sheet}
+     FOR     ${row}    IN    ${rows}
+             ${Username}        Get Cell Value    ${row}      A
+             ${Password}        Get Cell Value    ${row}      B
+             ${result}     Login     ${Username}      ${Password}
+             Set Cell Value   ${row}       C        ${result}
+     END
 
 *** Keywords ***
 Try Login
@@ -70,3 +79,13 @@ Try Login
     Fill Text    //form/div[1]/div/div[2]/input     ${username}
     Fill Text    //form/div[2]/div/div[2]/input     ${password}
     Click        //form/div[3]/button
+    # Get Text     //div[1]/p
+
+
+Login
+    [Arguments]    ${username}    ${password}
+    Fill Text    //form/div[1]/div/div[2]/input     ${username}
+    Fill Text    //form/div[2]/div/div[2]/input     ${password}
+    Click        //form/div[3]/button
+    ${result}     Run Keyword And Ignore Error    Get Text    //div[1]/p
+

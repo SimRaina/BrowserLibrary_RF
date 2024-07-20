@@ -18,6 +18,10 @@ Go to Site
     [Arguments]    ${url}
     New Page       ${url}
 
+Open Browser to Slider Page
+    Open Maximized Browser    Chromium
+    Go to Site                https://demoqa.com/slider
+
 Valid OrangeHRM Login
     Type Text     xpath=//div[1]/div/div[2]/input       Admin
     Type Text   xpath=//div[2]/div/div[2]/input     admin123
