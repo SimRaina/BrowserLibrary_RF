@@ -1,7 +1,6 @@
 *** Settings ***
-Library    Browser
-Library    RPA.Excel.Files
-Test Setup   Open Browser to OrangeHRM Page
+Library     Browser
+Library     RPA.Excel.Files
 Resource    ../Resource.robot
 
 *** Variables ***
@@ -52,40 +51,4 @@ WriteNewSheet
     ...    header=True
     Save Workbook
 
-
-
-ReadSheetAsTable
-    Open Workbook    ${EXCEL FILE}
-    ${data}=          Read Worksheet As Table    header=True
-    FOR      ${row}    IN        @{data}
-      Try Login      ${row['Username']}       ${row['Password']}
-    END
-    Close Workbook
-
-ReadData
-     Open Workbook      ${EXCEL FILE}
-     ${sheet}=        Read Worksheet     login      header=False
-     ${rows}=         Get Length        ${sheet}
-     FOR     ${row}    IN    ${rows}
-             ${Username}        Get Cell Value    ${row}      A
-             ${Password}        Get Cell Value    ${row}      B
-             ${result}     Login     ${Username}      ${Password}
-             Set Cell Value   ${row}       C        ${result}
-     END
-
-*** Keywords ***
-Try Login
-    [Arguments]    ${username}    ${password}
-    Fill Text    //form/div[1]/div/div[2]/input     ${username}
-    Fill Text    //form/div[2]/div/div[2]/input     ${password}
-    Click        //form/div[3]/button
-    # Get Text     //div[1]/p
-
-
-Login
-    [Arguments]    ${username}    ${password}
-    Fill Text    //form/div[1]/div/div[2]/input     ${username}
-    Fill Text    //form/div[2]/div/div[2]/input     ${password}
-    Click        //form/div[3]/button
-    ${result}     Run Keyword And Ignore Error    Get Text    //div[1]/p
 
