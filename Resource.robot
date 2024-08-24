@@ -22,6 +22,10 @@ Open Browser to Slider Page
     Open Maximized Browser    Chromium
     Go to Site                https://demoqa.com/slider
 
+Open Browser in Chrome
+     Open Maximized Browser     Chromium
+     Go to Site                 https://demo.nopcommerce.com/
+
 Valid OrangeHRM Login
     Type Text     xpath=//div[1]/div/div[2]/input       Admin
     Type Text   xpath=//div[2]/div/div[2]/input     admin123

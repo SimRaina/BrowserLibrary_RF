@@ -1,0 +1,8 @@
+datasources:4887f9739dc18ab5d7883765816a7e11e67c498d
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:c95ad819dbf8ed8d7cd21d234f782b2515cb3bc2
+--test ParallelTests.TestChrome.FirstChromeTest
+--test ParallelTests.TestChrome.ThirdChromeTest
+--test ParallelTests.TestChrome1.SecondChromeTest
+--test ParallelTests.TestChrome1.FourthChromeTest
