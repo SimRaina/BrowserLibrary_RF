@@ -84,7 +84,7 @@ Open Browser to SelectOptions Page
      Go to Site                https://demo.nopcommerce.com/digital-downloads
 
 Wait Sleep
-    Sleep           2
+    Sleep           4
 
 Read DropDown Data
     [Arguments]    ${filepath}       ${sheetname}        ${rownum}     ${colnum}
