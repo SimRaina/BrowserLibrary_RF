@@ -1,179 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20240929 12:57:25.618" rpa="false" schemaversion="4">
-<suite id="s1" name="PressKeysTest" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\PressKeysTest.robot">
-<test id="s1-t1" name="Test1" line="10">
-<kw name="Open Browser to OrangeHRM Page" library="Resource" type="SETUP">
-<kw name="Open Maximized Browser" library="Resource">
-<arg>Chromium</arg>
-<kw name="New Browser" library="Browser">
-<arg>browser=${browser}</arg>
-<arg>headless=false</arg>
-<arg>args=["--start-maximized"]</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20240929 12:57:26.865" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\bacf063a-ee89-4a18-8dca-163c867e1b4a"}</msg>
-<msg timestamp="20240929 12:57:27.470" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\bacf063a-ee89-4a18-8dca-163c867e1b4a"}</msg>
-<status status="PASS" starttime="20240929 12:57:26.864" endtime="20240929 12:57:27.471"/>
+<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-10-06T14:44:26.617281" rpa="false" schemaversion="5">
+<suite id="s1" name="StringLibTests" source="C:\Users\simra\Desktop\BrowserLibrary_RF\StringLibTest\StringLibTests.robot">
+<test id="s1-t1" name="Test6" line="40">
+<kw name="Remove String" owner="String">
+<msg time="2024-10-06T14:44:26.656959" level="INFO">${str} = qa</msg>
+<var>${str}</var>
+<arg>seniorqa</arg>
+<arg>senior</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.655685" elapsed="0.003282"/>
 </kw>
-<kw name="New Context" library="Browser">
-<arg>viewport=${None}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20240929 12:57:27.473" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": "",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": null
-}</msg>
-<msg timestamp="20240929 12:57:27.506" level="INFO">Successfully created context. </msg>
-<msg timestamp="20240929 12:57:27.506" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<status status="PASS" starttime="20240929 12:57:27.472" endtime="20240929 12:57:27.506"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${str}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.658967" elapsed="0.000000"/>
 </kw>
-<status status="PASS" starttime="20240929 12:57:26.864" endtime="20240929 12:57:27.507"/>
+<kw name="Replace String" owner="String">
+<msg time="2024-10-06T14:44:26.659966" level="INFO">${str} = Hola, seniorqa</msg>
+<var>${str}</var>
+<arg>Hello, seniorqa</arg>
+<arg>Hello</arg>
+<arg>Hola</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.659966" elapsed="0.000000"/>
 </kw>
-<kw name="Go to Site" library="Resource">
-<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
-<kw name="New Page" library="Browser">
-<arg>${url}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<msg timestamp="20240929 12:57:29.522" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
-<status status="PASS" starttime="20240929 12:57:27.509" endtime="20240929 12:57:29.523"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${str}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.659966" elapsed="0.000999"/>
 </kw>
-<status status="PASS" starttime="20240929 12:57:27.508" endtime="20240929 12:57:29.524"/>
+<kw name="Split String" owner="String">
+<msg time="2024-10-06T14:44:26.660965" level="INFO">@{words} = [ This | is | the | first | line. ]</msg>
+<var>@{words}</var>
+<arg>This is the first line.</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.660965" elapsed="0.000000"/>
 </kw>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>4</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240929 12:57:33.524" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20240929 12:57:29.524" endtime="20240929 12:57:33.524"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${words}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.660965" elapsed="0.001000"/>
 </kw>
-<status status="PASS" starttime="20240929 12:57:29.524" endtime="20240929 12:57:33.524"/>
+<kw name="Split String To Characters" owner="String">
+<msg time="2024-10-06T14:44:26.662471" level="INFO">@{characters} = [ h | e | l | l | o ]</msg>
+<var>@{characters}</var>
+<arg>hello</arg>
+<doc>Splits the given ``string`` to characters.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.661965" elapsed="0.000506"/>
 </kw>
-<status status="PASS" starttime="20240929 12:57:26.864" endtime="20240929 12:57:33.524"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${characters}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.662471" elapsed="0.001009"/>
 </kw>
-<kw name="Press Keys" library="Browser">
-<arg>//input[@name='username']</arg>
-<arg>a</arg>
-<arg>d</arg>
-<arg>m</arg>
-<arg>i</arg>
-<arg>n</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:33.525" endtime="20240929 12:57:33.608"/>
+<kw name="Strip String" owner="String">
+<msg time="2024-10-06T14:44:26.664486" level="INFO">${stripped} = Hello World</msg>
+<var>${stripped}</var>
+<arg>${SPACE}Hello${SPACE}World${SPACE}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.663480" elapsed="0.001006"/>
 </kw>
-<kw name="Press Keys" library="Browser">
-<arg>//input[@name='username']</arg>
-<arg>Control+A</arg>
-<arg>Control+C</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:33.609" endtime="20240929 12:57:33.623"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${stripped}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-06T14:44:26.664486" elapsed="0.000000"/>
 </kw>
-<kw name="Press Keys" library="Browser">
-<arg>//input[@name='password']</arg>
-<arg>Control+V</arg>
-<arg>1</arg>
-<arg>2</arg>
-<arg>3</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:33.623" endtime="20240929 12:57:33.682"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//button</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:33.683" endtime="20240929 12:57:34.704"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//span[text()='Admin']</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:34.704" endtime="20240929 12:57:36.296"/>
-</kw>
-<kw name="Press Keys" library="Browser">
-<arg>//label[text()='Username']/parent::div/following-sibling::div/input</arg>
-<arg>s</arg>
-<arg>i</arg>
-<arg>m</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:36.297" endtime="20240929 12:57:36.765"/>
-</kw>
-<kw name="Pause Execution" library="Dialogs">
-<doc>Pauses execution until user clicks ``Ok`` button.</doc>
-<status status="PASS" starttime="20240929 12:57:36.766" endtime="20240929 12:57:38.777"/>
-</kw>
-<kw name="Press Keys" library="Browser">
-<arg>//label[text()='Username']/parent::div/following-sibling::div/input</arg>
-<arg>Control+A</arg>
-<arg>Backspace</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:38.778" endtime="20240929 12:57:38.838"/>
-</kw>
-<kw name="Pause Execution" library="Dialogs">
-<doc>Pauses execution until user clicks ``Ok`` button.</doc>
-<status status="PASS" starttime="20240929 12:57:38.839" endtime="20240929 12:57:40.373"/>
-</kw>
-<kw name="Press Keys" library="Browser">
-<arg>//label[text()='Username']/parent::div/following-sibling::div/input</arg>
-<arg>s</arg>
-<arg>i</arg>
-<arg>m</arg>
-<arg>Tab</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:40.374" endtime="20240929 12:57:40.458"/>
-</kw>
-<kw name="Press Keys" library="Browser">
-<arg>//*[contains(text(),'Employee')]/parent::div/following-sibling::div//input</arg>
-<arg>a</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:40.459" endtime="20240929 12:57:40.495"/>
-</kw>
-<kw name="Wait Sleep" library="Resource">
-<kw name="Sleep" library="BuiltIn">
-<arg>4</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240929 12:57:44.497" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20240929 12:57:40.496" endtime="20240929 12:57:44.497"/>
-</kw>
-<status status="PASS" starttime="20240929 12:57:40.496" endtime="20240929 12:57:44.498"/>
-</kw>
-<kw name="Press Keys" library="Browser">
-<arg>//*[contains(text(),'Employee')]/parent::div/following-sibling::div//input</arg>
-<arg>ArrowDown</arg>
-<arg>Enter</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" starttime="20240929 12:57:44.498" endtime="20240929 12:57:44.521"/>
-</kw>
-<status status="PASS" starttime="20240929 12:57:26.861" endtime="20240929 12:57:44.521"/>
+<status status="PASS" start="2024-10-06T14:44:26.654677" elapsed="0.009809"/>
 </test>
-<status status="PASS" starttime="20240929 12:57:25.623" endtime="20240929 12:57:44.648"/>
+<status status="PASS" start="2024-10-06T14:44:26.620128" elapsed="0.045362"/>
 </suite>
 <statistics>
 <total>
@@ -182,7 +76,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="PressKeysTest">PressKeysTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="StringLibTests">StringLibTests</stat>
 </suite>
 </statistics>
 <errors>

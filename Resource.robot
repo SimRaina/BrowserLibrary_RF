@@ -8,7 +8,7 @@ Library   Collections
 Open Maximized Browser
     [Arguments]    ${browser}
     New Browser    browser=${browser}    headless=false   args=["--start-maximized"]
-    New Context    viewport=${None}
+    New Context    viewport=${None}    acceptDownloads=true
 
 Open Maximized URL
     [Arguments]    ${browser}   ${url}
