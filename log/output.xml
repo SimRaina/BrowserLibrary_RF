@@ -1,84 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-10-06T14:44:26.617281" rpa="false" schemaversion="5">
-<suite id="s1" name="StringLibTests" source="C:\Users\simra\Desktop\BrowserLibrary_RF\StringLibTest\StringLibTests.robot">
-<test id="s1-t1" name="Test6" line="40">
-<kw name="Remove String" owner="String">
-<msg time="2024-10-06T14:44:26.656959" level="INFO">${str} = qa</msg>
-<var>${str}</var>
-<arg>seniorqa</arg>
-<arg>senior</arg>
-<doc>Removes all ``removables`` from the given ``string``.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.655685" elapsed="0.003282"/>
+<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-10-13T10:13:48.432515" rpa="false" schemaversion="5">
+<suite id="s1" name="CollectionsTests" source="C:\Users\simra\Desktop\BrowserLibrary_RF\CollectionsLibTest\CollectionsTests.robot">
+<test id="s1-t1" name="Get Index From List Example" line="15">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-10-13T10:13:48.486394" level="INFO">${list} = ['red', 'green', 'blue']</msg>
+<var>${list}</var>
+<arg>red</arg>
+<arg>green</arg>
+<arg>blue</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-10-13T10:13:48.484202" elapsed="0.006212"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${str}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.658967" elapsed="0.000000"/>
+<kw name="Get Index From List" owner="Collections">
+<msg time="2024-10-13T10:13:48.491405" level="INFO">${color} = 2</msg>
+<var>${color}</var>
+<arg>${list}</arg>
+<arg>blue</arg>
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<status status="PASS" start="2024-10-13T10:13:48.490414" elapsed="0.000991"/>
 </kw>
-<kw name="Replace String" owner="String">
-<msg time="2024-10-06T14:44:26.659966" level="INFO">${str} = Hola, seniorqa</msg>
-<var>${str}</var>
-<arg>Hello, seniorqa</arg>
-<arg>Hello</arg>
-<arg>Hola</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.659966" elapsed="0.000000"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-13T10:13:48.492408" level="INFO">2</msg>
+<arg>${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-13T10:13:48.492408" elapsed="0.001002"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${str}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.659966" elapsed="0.000999"/>
-</kw>
-<kw name="Split String" owner="String">
-<msg time="2024-10-06T14:44:26.660965" level="INFO">@{words} = [ This | is | the | first | line. ]</msg>
-<var>@{words}</var>
-<arg>This is the first line.</arg>
-<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.660965" elapsed="0.000000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${words}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.660965" elapsed="0.001000"/>
-</kw>
-<kw name="Split String To Characters" owner="String">
-<msg time="2024-10-06T14:44:26.662471" level="INFO">@{characters} = [ h | e | l | l | o ]</msg>
-<var>@{characters}</var>
-<arg>hello</arg>
-<doc>Splits the given ``string`` to characters.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.661965" elapsed="0.000506"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${characters}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.662471" elapsed="0.001009"/>
-</kw>
-<kw name="Strip String" owner="String">
-<msg time="2024-10-06T14:44:26.664486" level="INFO">${stripped} = Hello World</msg>
-<var>${stripped}</var>
-<arg>${SPACE}Hello${SPACE}World${SPACE}</arg>
-<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.663480" elapsed="0.001006"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${stripped}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-06T14:44:26.664486" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-10-06T14:44:26.654677" elapsed="0.009809"/>
+<status status="PASS" start="2024-10-13T10:13:48.480202" elapsed="0.013208"/>
 </test>
-<status status="PASS" start="2024-10-06T14:44:26.620128" elapsed="0.045362"/>
+<test id="s1-t2" name="Get Index From List Example" line="98">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-10-13T10:13:48.495458" level="INFO">${list} = ['one', 'two', 'three']</msg>
+<var>${list}</var>
+<arg>one</arg>
+<arg>two</arg>
+<arg>three</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-10-13T10:13:48.494410" elapsed="0.001048"/>
+</kw>
+<kw name="Get Index From List" owner="Collections">
+<msg time="2024-10-13T10:13:48.495458" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>${list}</arg>
+<arg>two</arg>
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<status status="PASS" start="2024-10-13T10:13:48.495458" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-13T10:13:48.495458" level="INFO">1</msg>
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-13T10:13:48.495458" elapsed="0.001013"/>
+</kw>
+<status status="PASS" start="2024-10-13T10:13:48.494410" elapsed="0.002061"/>
+</test>
+<status status="PASS" start="2024-10-13T10:13:48.435363" elapsed="0.061108"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="StringLibTests">StringLibTests</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="CollectionsTests">CollectionsTests</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-10-13T10:13:48.493410" level="WARN">Multiple tests with name 'Get Index From List Example' executed in suite 'CollectionsTests'.</msg>
 </errors>
 </robot>
