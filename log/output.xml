@@ -1,71 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-10-13T10:13:48.432515" rpa="false" schemaversion="5">
-<suite id="s1" name="CollectionsTests" source="C:\Users\simra\Desktop\BrowserLibrary_RF\CollectionsLibTest\CollectionsTests.robot">
-<test id="s1-t1" name="Get Index From List Example" line="15">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-10-13T10:13:48.486394" level="INFO">${list} = ['red', 'green', 'blue']</msg>
-<var>${list}</var>
-<arg>red</arg>
-<arg>green</arg>
-<arg>blue</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-10-13T10:13:48.484202" elapsed="0.006212"/>
+<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-10-20T10:37:35.348648" rpa="false" schemaversion="5">
+<suite id="s1" name="BuiltInTests" source="C:\Users\simra\Desktop\BrowserLibrary_RF\CollectionsLibTest\BuiltInTests.robot">
+<test id="s1-t1" name="ContinueForLoop Test" line="46">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.381309" level="INFO">Checking John</msg>
+<arg>Checking ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.380307" elapsed="0.002983"/>
 </kw>
-<kw name="Get Index From List" owner="Collections">
-<msg time="2024-10-13T10:13:48.491405" level="INFO">${color} = 2</msg>
-<var>${color}</var>
-<arg>${list}</arg>
-<arg>blue</arg>
-<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
-<status status="PASS" start="2024-10-13T10:13:48.490414" elapsed="0.000991"/>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${name}' == 'Skip'</arg>
+<arg>Continue For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.383290" elapsed="0.000993"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-10-13T10:13:48.492408" level="INFO">2</msg>
-<arg>${color}</arg>
+<msg time="2024-10-20T10:37:35.385285" level="INFO">John is processed</msg>
+<arg>${name} is processed</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-13T10:13:48.492408" elapsed="0.001002"/>
+<status status="PASS" start="2024-10-20T10:37:35.384283" elapsed="0.001002"/>
 </kw>
-<status status="PASS" start="2024-10-13T10:13:48.480202" elapsed="0.013208"/>
-</test>
-<test id="s1-t2" name="Get Index From List Example" line="98">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-10-13T10:13:48.495458" level="INFO">${list} = ['one', 'two', 'three']</msg>
-<var>${list}</var>
-<arg>one</arg>
-<arg>two</arg>
-<arg>three</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-10-13T10:13:48.494410" elapsed="0.001048"/>
+<var name="${name}">John</var>
+<status status="PASS" start="2024-10-20T10:37:35.379304" elapsed="0.005981"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.387315" level="INFO">Checking Alex</msg>
+<arg>Checking ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.386287" elapsed="0.001028"/>
 </kw>
-<kw name="Get Index From List" owner="Collections">
-<msg time="2024-10-13T10:13:48.495458" level="INFO">${index} = 1</msg>
-<var>${index}</var>
-<arg>${list}</arg>
-<arg>two</arg>
-<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
-<status status="PASS" start="2024-10-13T10:13:48.495458" elapsed="0.000000"/>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${name}' == 'Skip'</arg>
+<arg>Continue For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.387315" elapsed="0.000988"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-10-13T10:13:48.495458" level="INFO">1</msg>
-<arg>${index}</arg>
+<msg time="2024-10-20T10:37:35.388303" level="INFO">Alex is processed</msg>
+<arg>${name} is processed</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-13T10:13:48.495458" elapsed="0.001013"/>
+<status status="PASS" start="2024-10-20T10:37:35.388303" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-10-13T10:13:48.494410" elapsed="0.002061"/>
+<var name="${name}">Alex</var>
+<status status="PASS" start="2024-10-20T10:37:35.386287" elapsed="0.002016"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.389503" level="INFO">Checking Skip</msg>
+<arg>Checking ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.389503" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Continue For Loop" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.389503" level="INFO">Continuing for loop from the next iteration.</msg>
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.389503" elapsed="0.001016"/>
+</kw>
+<arg>'${name}' == 'Skip'</arg>
+<arg>Continue For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.389503" elapsed="0.001016"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${name} is processed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-10-20T10:37:35.390519" elapsed="0.000000"/>
+</kw>
+<var name="${name}">Skip</var>
+<status status="PASS" start="2024-10-20T10:37:35.389503" elapsed="0.001016"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.390519" level="INFO">Checking Maria</msg>
+<arg>Checking ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.390519" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${name}' == 'Skip'</arg>
+<arg>Continue For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.390519" elapsed="0.000978"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.392502" level="INFO">Maria is processed</msg>
+<arg>${name} is processed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.391497" elapsed="0.001005"/>
+</kw>
+<var name="${name}">Maria</var>
+<status status="PASS" start="2024-10-20T10:37:35.390519" elapsed="0.001983"/>
+</iter>
+<var>${name}</var>
+<value>@{NAMES}</value>
+<status status="PASS" start="2024-10-20T10:37:35.379304" elapsed="0.013198"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.392502" level="INFO">Checking number 1</msg>
+<arg>Checking number ${num}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.392502" elapsed="0.000000"/>
+</kw>
+<kw name="Continue For Loop If" owner="BuiltIn">
+<arg>${num} == 3</arg>
+<doc>Skips the current FOR loop iteration if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.392502" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.394012" level="INFO">Number 1 is valid</msg>
+<arg>Number ${num} is valid</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.392502" elapsed="0.001510"/>
+</kw>
+<var name="${num}">1</var>
+<status status="PASS" start="2024-10-20T10:37:35.392502" elapsed="0.001510"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.394012" level="INFO">Checking number 2</msg>
+<arg>Checking number ${num}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.394012" elapsed="0.000000"/>
+</kw>
+<kw name="Continue For Loop If" owner="BuiltIn">
+<arg>${num} == 3</arg>
+<doc>Skips the current FOR loop iteration if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.394012" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.395021" level="INFO">Number 2 is valid</msg>
+<arg>Number ${num} is valid</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.395021" elapsed="0.000000"/>
+</kw>
+<var name="${num}">2</var>
+<status status="PASS" start="2024-10-20T10:37:35.394012" elapsed="0.001009"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.395021" level="INFO">Checking number 3</msg>
+<arg>Checking number ${num}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.395021" elapsed="0.000000"/>
+</kw>
+<kw name="Continue For Loop If" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.395021" level="INFO">Continuing for loop from the next iteration.</msg>
+<arg>${num} == 3</arg>
+<doc>Skips the current FOR loop iteration if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.395021" elapsed="0.001000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Number ${num} is valid</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-10-20T10:37:35.396021" elapsed="0.000000"/>
+</kw>
+<var name="${num}">3</var>
+<status status="PASS" start="2024-10-20T10:37:35.395021" elapsed="0.001000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.396021" level="INFO">Checking number 4</msg>
+<arg>Checking number ${num}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.396021" elapsed="0.000000"/>
+</kw>
+<kw name="Continue For Loop If" owner="BuiltIn">
+<arg>${num} == 3</arg>
+<doc>Skips the current FOR loop iteration if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.396021" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.397021" level="INFO">Number 4 is valid</msg>
+<arg>Number ${num} is valid</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.397021" elapsed="0.000000"/>
+</kw>
+<var name="${num}">4</var>
+<status status="PASS" start="2024-10-20T10:37:35.396021" elapsed="0.001000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.397021" level="INFO">Checking number 5</msg>
+<arg>Checking number ${num}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.397021" elapsed="0.000000"/>
+</kw>
+<kw name="Continue For Loop If" owner="BuiltIn">
+<arg>${num} == 3</arg>
+<doc>Skips the current FOR loop iteration if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.397021" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-20T10:37:35.397021" level="INFO">Number 5 is valid</msg>
+<arg>Number ${num} is valid</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-20T10:37:35.397021" elapsed="0.000000"/>
+</kw>
+<var name="${num}">5</var>
+<status status="PASS" start="2024-10-20T10:37:35.397021" elapsed="0.000000"/>
+</iter>
+<var>${num}</var>
+<value>@{NUMBERS}</value>
+<status status="PASS" start="2024-10-20T10:37:35.392502" elapsed="0.004519"/>
+</for>
+<status status="PASS" start="2024-10-20T10:37:35.378275" elapsed="0.018746"/>
 </test>
-<status status="PASS" start="2024-10-13T10:13:48.435363" elapsed="0.061108"/>
+<status status="PASS" start="2024-10-20T10:37:35.351666" elapsed="0.046863"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="CollectionsTests">CollectionsTests</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="BuiltInTests">BuiltInTests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-10-13T10:13:48.493410" level="WARN">Multiple tests with name 'Get Index From List Example' executed in suite 'CollectionsTests'.</msg>
 </errors>
 </robot>
