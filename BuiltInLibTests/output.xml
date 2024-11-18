@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-11-02T10:58:55.536417" rpa="false" schemaversion="5">
+<suite id="s1" name="AssertionTests" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BuiltInLibTests\AssertionTests.robot">
+<test id="s1-t1" name="Test Condition Is True" line="4">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.615442" level="INFO">${x} = 5</msg>
+<var>${x}</var>
+<arg>5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.615442" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${x} &gt; 0</arg>
+<arg>Expected x to be greater than 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.615442" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.615442" elapsed="0.000000"/>
+</test>
+<test id="s1-t2" name="Test Condition Is Not True" line="8">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.615442" level="INFO">${y} = 0</msg>
+<var>${y}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.615442" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be True" owner="BuiltIn">
+<arg>${y} &gt; 0</arg>
+<arg>Expected y to not be greater than 0</arg>
+<doc>Fails if the given condition is true.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.615442" elapsed="0.009881"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.615442" elapsed="0.009881"/>
+</test>
+<test id="s1-t3" name="Test Values Are Equal" line="12">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.626231" level="INFO">${name} = seniorQA</msg>
+<var>${name}</var>
+<arg>seniorQA</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.626231" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>seniorQA</arg>
+<arg>Expected name to be 'seniorQA'</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.626231" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.626231" elapsed="0.000000"/>
+</test>
+<test id="s1-t4" name="Test Values Are Not Equal" line="16">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.630915" level="INFO">${name} = Automation</msg>
+<var>${name}</var>
+<arg>Automation</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.630915" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>Robot</arg>
+<arg>Expected name to be something other than 'Robot'</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.630915" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.630915" elapsed="0.000000"/>
+</test>
+<test id="s1-t5" name="Test Numbers Are Equal" line="20">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.636922" level="INFO">${num1} = 10</msg>
+<var>${num1}</var>
+<arg>10</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.636922" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.636922" level="INFO">${num2} = 10.0</msg>
+<var>${num2}</var>
+<arg>10.0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.636922" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${num1}</arg>
+<arg>${num2}</arg>
+<arg>Expected numbers to be equal</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.640445" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.636922" elapsed="0.003523"/>
+</test>
+<test id="s1-t6" name="Test Numbers Are Not Equal" line="25">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.640445" level="INFO">${num1} = 5</msg>
+<var>${num1}</var>
+<arg>5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.640445" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.640445" level="INFO">${num2} = 10</msg>
+<var>${num2}</var>
+<arg>10</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.640445" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Equal As Numbers" owner="BuiltIn">
+<arg>${num1}</arg>
+<arg>${num2}</arg>
+<arg>Expected numbers to be different</arg>
+<doc>Fails if objects are equal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.645425" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.640445" elapsed="0.004980"/>
+</test>
+<test id="s1-t7" name="Test Strings Are Equal" line="30">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.646931" level="INFO">${str1} = Hello</msg>
+<var>${str1}</var>
+<arg>Hello</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.646931" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.651524" level="INFO">${str2} = HELLO</msg>
+<var>${str2}</var>
+<arg>HELLO</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.650609" elapsed="0.000915"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${str1.lower()}</arg>
+<arg>${str2.lower()}</arg>
+<arg>Strings should be equal when lowercase</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.651524" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.646931" elapsed="0.004593"/>
+</test>
+<test id="s1-t8" name="Test Strings Are Not Equal" line="35">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.651524" level="INFO">${str1} = Hello</msg>
+<var>${str1}</var>
+<arg>Hello</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.651524" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.651524" level="INFO">${str2} = World</msg>
+<var>${str2}</var>
+<arg>World</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.651524" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Equal As Strings" owner="BuiltIn">
+<arg>${str1}</arg>
+<arg>${str2}</arg>
+<arg>Expected strings to be different</arg>
+<doc>Fails if objects are equal after converting them to strings.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.659689" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.651524" elapsed="0.008165"/>
+</test>
+<test id="s1-t9" name="Test Value Is Empty" line="40">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.662932" level="INFO">${empty_list} = []</msg>
+<var>${empty_list}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.662932" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Empty" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.662932" level="INFO">Length is 0.</msg>
+<arg>${empty_list}</arg>
+<arg>Expected list to be empty</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.662932" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.660926" elapsed="0.002006"/>
+</test>
+<test id="s1-t10" name="Test Value Is Not Empty" line="44">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.667422" level="INFO">${non_empty_list} = ['item1']</msg>
+<var>${non_empty_list}</var>
+<arg>item1</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.667422" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.667422" level="INFO">Length is 1.</msg>
+<arg>${non_empty_list}</arg>
+<arg>Expected list to not be empty</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.667422" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.667422" elapsed="0.003619"/>
+</test>
+<test id="s1-t11" name="Test Item Contains Value" line="48">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.672213" level="INFO">${text} = Hello World</msg>
+<var>${text}</var>
+<arg>Hello World</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.672213" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>World</arg>
+<arg>Expected 'World' to be in the text</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.672213" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.672213" elapsed="0.000000"/>
+</test>
+<test id="s1-t12" name="Test Item Does Not Contain Value" line="52">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.678722" level="INFO">${text} = Hello Universe</msg>
+<var>${text}</var>
+<arg>Hello Universe</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.678722" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>World</arg>
+<arg>Expected 'World' to not be in the text</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.680731" elapsed="0.000725"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.672213" elapsed="0.009243"/>
+</test>
+<test id="s1-t13" name="Test String Matches Pattern" line="56">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.685043" level="INFO">${filename} = report-2023-10.pdf</msg>
+<var>${filename}</var>
+<arg>report-2023-10.pdf</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.685043" elapsed="0.000000"/>
+</kw>
+<kw name="Should Match" owner="BuiltIn">
+<arg>${filename}</arg>
+<arg>report-*.pdf</arg>
+<arg>Filename should match pattern</arg>
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.685995" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.684475" elapsed="0.003090"/>
+</test>
+<test id="s1-t14" name="Test String Does Not Match Pattern" line="60">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-02T10:58:55.687565" level="INFO">${filename} = data.csv</msg>
+<var>${filename}</var>
+<arg>data.csv</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.687565" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Match" owner="BuiltIn">
+<arg>${filename}</arg>
+<arg>*.pdf</arg>
+<arg>Expected filename not to be PDF</arg>
+<doc>Fails if the given ``string`` matches the given ``pattern``.</doc>
+<status status="PASS" start="2024-11-02T10:58:55.687565" elapsed="0.005521"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:58:55.687565" elapsed="0.005521"/>
+</test>
+<status status="PASS" start="2024-11-02T10:58:55.599844" elapsed="0.094747"/>
+</suite>
+<statistics>
+<total>
+<stat pass="14" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="14" fail="0" skip="0" id="s1" name="AssertionTests">AssertionTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

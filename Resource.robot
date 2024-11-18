@@ -28,7 +28,7 @@ Open Browser in Chrome
 
 Valid OrangeHRM Login
     Type Text     xpath=//div[1]/div/div[2]/input       Admin
-    Type Text   xpath=//div[2]/div/div[2]/input     admin123
+    Type Text     xpath=//div[2]/div/div[2]/input     admin123
     Click         css=button >> text=Login
 
 Open Browser to TurkAir Page

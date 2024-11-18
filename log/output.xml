@@ -1,33 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-10-26T19:42:06.221803" rpa="false" schemaversion="5">
-<suite id="s1" name="AssertionTests" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BuiltInLibTests\AssertionTests.robot">
-<test id="s1-t1" name="Test String Does Not Match Pattern" line="60">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-26T19:42:06.256463" level="INFO">${filename} = data.csv</msg>
-<var>${filename}</var>
-<arg>data.csv</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-26T19:42:06.256463" elapsed="0.003004"/>
+<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-11-18T18:47:16.982344" rpa="false" schemaversion="5">
+<suite id="s1" name="FirefoxBrowser" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\FirefoxBrowser.robot">
+<test id="s1-t1" name="Open Firefox Maximized" line="6">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-11-18T18:47:17.759770" level="INFO">{"browser": "firefox", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\096729fb-66e3-465a-ba8c-8e271c2a6c0a"}</msg>
+<msg time="2024-11-18T18:47:18.936411" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\096729fb-66e3-465a-ba8c-8e271c2a6c0a"}</msg>
+<arg>firefox</arg>
+<arg>headless=False</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-11-18T18:47:17.759770" elapsed="1.176641"/>
 </kw>
-<kw name="Should Not Match" owner="BuiltIn">
-<arg>${filename}</arg>
-<arg>*.pdf</arg>
-<arg>Expected filename not to be PDF</arg>
-<doc>Fails if the given ``string`` matches the given ``pattern``.</doc>
-<status status="PASS" start="2024-10-26T19:42:06.259981" elapsed="0.001011"/>
+<kw name="New Context" owner="Browser">
+<msg time="2024-11-18T18:47:18.936411" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": "",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": null
+}</msg>
+<msg time="2024-11-18T18:47:18.984202" level="INFO">Successfully created context. </msg>
+<msg time="2024-11-18T18:47:18.984202" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
+<arg>viewport=None</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-11-18T18:47:18.936411" elapsed="0.047791"/>
 </kw>
-<status status="PASS" start="2024-10-26T19:42:06.255462" elapsed="0.005530"/>
+<kw name="New Page" owner="Browser">
+<msg time="2024-11-18T18:47:20.918505" level="INFO">Successfully initialized new page object and opened url: https://example.com</msg>
+<arg>https://example.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-11-18T18:47:18.984202" elapsed="1.934303"/>
+</kw>
+<kw name="Pause Execution" owner="Dialogs">
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" start="2024-11-18T18:47:20.918505" elapsed="5.746340"/>
+</kw>
+<kw name="New Persistent Context" owner="Browser">
+<msg time="2024-11-18T18:47:26.666759" level="FAIL">Keyword 'Browser.New Persistent Context' got positional argument after named arguments.</msg>
+<arg>browser=firefox</arg>
+<arg>headless=false</arg>
+<arg>args=["--start-maximized"]</arg>
+<arg>viewport=${None}</arg>
+<arg>u</arg>
+<doc>Open a new
+[https://playwright.dev/docs/api/class-browsertype#browser-type-launch-persistent-context | persistent context].</doc>
+<status status="FAIL" start="2024-11-18T18:47:26.664845" elapsed="0.001914">Keyword 'Browser.New Persistent Context' got positional argument after named arguments.</status>
+</kw>
+<status status="FAIL" start="2024-11-18T18:47:17.759770" elapsed="8.906989">Keyword 'Browser.New Persistent Context' got positional argument after named arguments.</status>
 </test>
-<status status="PASS" start="2024-10-26T19:42:06.225885" elapsed="0.039149"/>
+<status status="FAIL" start="2024-11-18T18:47:16.994857" elapsed="9.755209"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="AssertionTests">AssertionTests</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="FirefoxBrowser">FirefoxBrowser</stat>
 </suite>
 </statistics>
 <errors>
