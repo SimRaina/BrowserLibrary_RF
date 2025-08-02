@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-11-18T18:47:16.982344" rpa="false" schemaversion="5">
-<suite id="s1" name="FirefoxBrowser" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\FirefoxBrowser.robot">
-<test id="s1-t1" name="Open Firefox Maximized" line="6">
+<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2025-08-02T15:26:11.781731" rpa="false" schemaversion="5">
+<suite id="s1" name="ShadowDomTest" source="C:\Users\simra\Desktop\BrowserLibrary_RF\BrowserTest\ShadowDomTest.robot">
+<test id="s1-t1" name="Click Shop Now Inside Shadow DOM" line="6">
 <kw name="New Browser" owner="Browser">
-<msg time="2024-11-18T18:47:17.759770" level="INFO">{"browser": "firefox", "headless": false, "args": ["--start-maximized"], "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\096729fb-66e3-465a-ba8c-8e271c2a6c0a"}</msg>
-<msg time="2024-11-18T18:47:18.936411" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"args":["--start-maximized"],"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\096729fb-66e3-465a-ba8c-8e271c2a6c0a"}</msg>
-<arg>firefox</arg>
-<arg>headless=False</arg>
-<arg>args=["--start-maximized"]</arg>
+<msg time="2025-08-02T15:26:13.225889" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\9f980bfe-e0dd-4bd2-898b-785b320302af"}</msg>
+<msg time="2025-08-02T15:26:13.972028" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\simra\\Desktop\\BrowserLibrary_RF\\log\\browser\\traces\\9f980bfe-e0dd-4bd2-898b-785b320302af"}</msg>
+<arg>chromium</arg>
+<arg>headless=false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-11-18T18:47:17.759770" elapsed="1.176641"/>
+<status status="PASS" start="2025-08-02T15:26:13.225300" elapsed="0.747726"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2024-11-18T18:47:18.936411" level="INFO">{
+<msg time="2025-08-02T15:26:13.975025" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -23,51 +22,58 @@
   "javaScriptEnabled": true,
   "offline": false,
   "reducedMotion": "no-preference",
-  "viewport": null
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
 }</msg>
-<msg time="2024-11-18T18:47:18.984202" level="INFO">Successfully created context. </msg>
-<msg time="2024-11-18T18:47:18.984202" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': None}</msg>
-<arg>viewport=None</arg>
+<msg time="2025-08-02T15:26:14.012456" level="INFO">Successfully created context. </msg>
+<msg time="2025-08-02T15:26:14.012456" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2024-11-18T18:47:18.936411" elapsed="0.047791"/>
+<status status="PASS" start="2025-08-02T15:26:13.974026" elapsed="0.038430"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2024-11-18T18:47:20.918505" level="INFO">Successfully initialized new page object and opened url: https://example.com</msg>
-<arg>https://example.com</arg>
+<msg time="2025-08-02T15:26:15.761461" level="INFO">Successfully initialized new page object and opened url: https://shop.polymer-project.org/</msg>
+<arg>https://shop.polymer-project.org/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2024-11-18T18:47:18.984202" elapsed="1.934303"/>
+<status status="PASS" start="2025-08-02T15:26:14.013453" elapsed="1.752541"/>
 </kw>
-<kw name="Pause Execution" owner="Dialogs">
-<doc>Pauses execution until user clicks ``Ok`` button.</doc>
-<status status="PASS" start="2024-11-18T18:47:20.918505" elapsed="5.746340"/>
+<kw name="Click" owner="Browser">
+<arg>shop-home &gt;&gt; shop-button &gt;&gt; a[aria-label="Men's Outerwear Shop Now"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-02T15:26:15.768006" elapsed="0.409662"/>
 </kw>
-<kw name="New Persistent Context" owner="Browser">
-<msg time="2024-11-18T18:47:26.666759" level="FAIL">Keyword 'Browser.New Persistent Context' got positional argument after named arguments.</msg>
-<arg>browser=firefox</arg>
-<arg>headless=false</arg>
-<arg>args=["--start-maximized"]</arg>
-<arg>viewport=${None}</arg>
-<arg>u</arg>
-<doc>Open a new
-[https://playwright.dev/docs/api/class-browsertype#browser-type-launch-persistent-context | persistent context].</doc>
-<status status="FAIL" start="2024-11-18T18:47:26.664845" elapsed="0.001914">Keyword 'Browser.New Persistent Context' got positional argument after named arguments.</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-02T15:26:19.179269" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-02T15:26:16.178676" elapsed="3.000593"/>
 </kw>
-<status status="FAIL" start="2024-11-18T18:47:17.759770" elapsed="8.906989">Keyword 'Browser.New Persistent Context' got positional argument after named arguments.</status>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-08-02T15:26:20.058400" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-02T15:26:19.179269" elapsed="0.879131"/>
+</kw>
+<status status="PASS" start="2025-08-02T15:26:13.222204" elapsed="6.837210"/>
 </test>
-<status status="FAIL" start="2024-11-18T18:47:16.994857" elapsed="9.755209"/>
+<status status="PASS" start="2025-08-02T15:26:11.784732" elapsed="8.285709"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="FirefoxBrowser">FirefoxBrowser</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="ShadowDomTest">ShadowDomTest</stat>
 </suite>
 </statistics>
 <errors>
